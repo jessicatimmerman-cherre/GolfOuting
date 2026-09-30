@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#173C30">
+<title>The Clubhouse · Emerson PTA Golf Outing</title>
+<meta name="description" content="Flip the Sponsor Deck, find the surprises, unlock the Clubhouse. Emerson Elementary PTA 4th Annual Golf Outing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   01. TOKENS
+   ========================================================= */
+:root{
+  --kelly:#167447; --fairway:#315E48; --pine:#173C30;
+  --cream:#F5F1E7; --scorecard:#E9E2D3; --sand:#D3C4A7; --walnut:#5A4636;
+  --sky:#6493CD; --club:#4D75AB; --navy:#2B4C7A;
+  --gold:#C89A45; --gold-deep:#8A6420; --blush:#D9A6A0;
+  --ink:#1B2A23; --muted:#56615b;
+  --serif:'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --sans:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --r:14px;
+  --shadow:0 1px 0 rgba(23,60,48,.06), 0 10px 24px -14px rgba(23,60,48,.55);
+  --topo-light:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%23F5F1E7' stroke-opacity='.08' stroke-width='1.2'%3E%3Cellipse cx='110' cy='120' rx='96' ry='62' transform='rotate(-14 110 120)'/%3E%3Cellipse cx='110' cy='120' rx='72' ry='44' transform='rotate(-10 110 120)'/%3E%3Cellipse cx='112' cy='118' rx='48' ry='28' transform='rotate(-6 112 118)'/%3E%3Cellipse cx='114' cy='118' rx='24' ry='13'/%3E%3Cellipse cx='318' cy='300' rx='110' ry='70' transform='rotate(18 318 300)'/%3E%3Cellipse cx='318' cy='300' rx='82' ry='50' transform='rotate(22 318 300)'/%3E%3Cellipse cx='320' cy='302' rx='54' ry='32' transform='rotate(26 320 302)'/%3E%3Cellipse cx='322' cy='304' rx='26' ry='14' transform='rotate(30 322 304)'/%3E%3Cpath d='M-10 260 C60 230 120 300 190 270 S300 200 430 230'/%3E%3Cpath d='M-10 20 C80 0 160 50 250 20 S360 -10 430 10'/%3E%3C/g%3E%3C/svg%3E");
+  --topo-dark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%23173C30' stroke-opacity='.07' stroke-width='1.2'%3E%3Cellipse cx='110' cy='120' rx='96' ry='62' transform='rotate(-14 110 120)'/%3E%3Cellipse cx='110' cy='120' rx='72' ry='44' transform='rotate(-10 110 120)'/%3E%3Cellipse cx='112' cy='118' rx='48' ry='28' transform='rotate(-6 112 118)'/%3E%3Cellipse cx='318' cy='300' rx='110' ry='70' transform='rotate(18 318 300)'/%3E%3Cellipse cx='318' cy='300' rx='82' ry='50' transform='rotate(22 318 300)'/%3E%3Cellipse cx='320' cy='302' rx='54' ry='32' transform='rotate(26 320 302)'/%3E%3Cpath d='M-10 260 C60 230 120 300 190 270 S300 200 430 230'/%3E%3C/g%3E%3C/svg%3E");
+  color-scheme: light;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{margin:0; background:var(--cream); background-image:var(--topo-dark); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.45; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+button{font:inherit; color:inherit; cursor:pointer}
+a{color:var(--kelly)}
+:focus-visible{outline:3px solid var(--sky); outline-offset:3px; border-radius:8px}
+.sr-only{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+.skip{position:absolute; left:12px; top:-60px; background:var(--gold); color:var(--pine); padding:10px 14px; border-radius:10px; font-weight:700; z-index:100}
+.skip:focus{top:12px}
+.caps{text-transform:uppercase; letter-spacing:.14em; font-weight:700; font-size:12px}
+.serif{font-family:var(--serif); font-weight:400}
+
+/* =========================================================
+   02. OPENING
+   ========================================================= */
+.open{background:var(--pine); background-image:var(--topo-light); color:var(--cream); padding:20px 16px 30px; position:relative; overflow:hidden}
+.open-inner{max-width:1180px; margin:0 auto}
+.open-top{display:flex; align-items:center; gap:12px}
+.crest{width:56px; height:56px; flex:none}
+.open-org{line-height:1.2}
+.open-org .caps{color:var(--gold); font-size:11px}
+.open-org strong{display:block; font-family:var(--serif); font-weight:400; font-size:22px; letter-spacing:.01em}
+.open-meta{margin:14px 0 0; display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:rgba(245,241,231,.8)}
+.open-meta > span:not(.egg-inline){display:inline-flex; align-items:center}
+.open h1{font-family:var(--serif); font-weight:400; font-size:clamp(44px, 12.5vw, 96px); line-height:.95; margin:18px 0 14px; letter-spacing:-.01em}
+.open h1 em{font-style:italic; color:var(--gold)}
+.open-lede{font-size:17px; max-width:36ch; margin:0 0 22px; color:rgba(245,241,231,.9)}
+.cta{display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px; border:0;
+  background:var(--cream); color:var(--pine); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:15px; text-decoration:none;
+  box-shadow:0 2px 0 rgba(0,0,0,.2); transition:transform .15s}
+.cta:active{transform:translateY(1px) scale(.98)}
+.cta.gold{background:var(--gold); color:var(--pine)}
+.cta[disabled], .cta[aria-disabled="true"]{opacity:.5; cursor:not-allowed}
+.cta.done{background:var(--kelly); color:var(--cream)}
+.hero-play{display:flex; flex-direction:column; align-items:center; gap:18px; margin-top:26px}
+.counters{display:grid; grid-template-columns:1fr 1fr; gap:8px; width:100%; max-width:460px}
+.counter{display:flex; align-items:center; gap:8px; padding:8px 10px 8px 8px; min-width:0; border-radius:999px; background:rgba(245,241,231,.08); border:1px solid rgba(245,241,231,.18)}
+.counter .chip{width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--gold); color:var(--pine); font-weight:800; font-size:17px; box-shadow: inset 0 0 0 3px rgba(23,60,48,.25), inset 0 0 0 5px var(--gold)}
+.counter .mini-card{width:24px; height:32px; flex:none; border-radius:5px; background:var(--kelly); border:2px solid var(--cream); margin:0 4px}
+.counter .chip{flex:none}
+.counter b{font-size:18px}
+.counter small{display:block; font-size:10px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; opacity:.8; line-height:1.2}
+@media (min-width:500px){ .counter small{font-size:11px; letter-spacing:.12em} .counter{padding-right:14px} }
+.preview{position:relative; height:176px; width:280px; margin:26px auto 0}
+.preview button{position:absolute; top:10px; width:108px; height:150px; border-radius:12px; border:0; padding:0; background:transparent; transition:transform .25s}
+.preview .pv{width:100%; height:100%; border-radius:12px; box-shadow:0 14px 30px -12px rgba(0,0,0,.6); display:grid; place-items:center; text-align:center; padding:10px}
+.preview .pv1{background:var(--scorecard); color:var(--pine)}
+.preview .pv2{background:var(--club); color:var(--cream)}
+.preview .pv3{background:var(--kelly); color:var(--cream)}
+.preview button:nth-child(1){left:0; transform:rotate(-9deg)}
+.preview button:nth-child(2){left:86px; transform:rotate(3deg) translateY(-6px)}
+.preview button:nth-child(3){left:172px; transform:rotate(11deg)}
+.preview .pv b{font-family:var(--serif); font-weight:400; font-size:40px; line-height:.9; display:block}
+.preview .pv3 b{font-size:30px}
+.preview .pv small{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase}
+@media (hover:hover){ .preview button:hover{transform:rotate(0) translateY(-10px)!important} }
+.preview-note{position:absolute; left:300px; top:52px; font-family:var(--serif); font-style:italic; font-size:22px; color:var(--gold); width:150px; line-height:1.1}
+@media (max-width:760px){ .preview-note{display:none} }
+
+/* =========================================================
+   03. SECTION HEADS + DECK PROGRESS
+   ========================================================= */
+.wrap{max-width:1180px; margin:0 auto; padding:0 16px}
+.start{padding:36px 16px 10px; outline:none; scroll-margin-top:8px}
+.start h2{font-family:var(--serif); font-weight:400; font-size:clamp(36px, 9.6vw, 76px); line-height:.95; margin:0; color:var(--pine); letter-spacing:-.01em}
+.start h2 em{font-style:italic; color:var(--kelly)}
+
+/* =========================================================
+   04. DECK GRID + CARDS
+   ========================================================= */
+.deck-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; grid-auto-flow:row dense; margin:16px auto 0; max-width:1180px; padding:0 16px}
+@media (min-width:900px){ .deck-grid{grid-template-columns:repeat(4, minmax(0,1fr)); gap:18px} }
+.card-wrap{display:flex; flex-direction:column; min-width:0}
+.card-wrap.span-2{grid-column:span 2}
+.card{position:relative; flex:1; perspective:1300px; border-radius:var(--r); -webkit-tap-highlight-color:transparent; outline:none; min-height:232px; cursor:pointer; transition:transform .2s}
+.card-wrap.span-2 .card{min-height:200px}
+@media (min-width:900px){ .card, .card-wrap.span-2 .card{min-height:300px} }
+.card:focus-visible{outline:3px solid var(--sky); outline-offset:4px}
+.card-inner{display:grid; height:100%; transform-style:preserve-3d; transition:transform .62s cubic-bezier(.2,.75,.25,1)}
+.face{grid-area:1/1; border-radius:var(--r); padding:14px; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden; box-shadow:var(--shadow);
+  -webkit-backface-visibility:hidden; backface-visibility:hidden; min-height:100%}
+/* REVEAL 1: FLIP (Y axis, trading card) */
+.rv-flip .face-back{transform:rotateY(180deg)}
+.rv-flip.is-open .card-inner{transform:rotateY(180deg)}
+/* REVEAL 2: TUMBLE (X axis, like turning over a scorecard) */
+.rv-tumble .face-back{transform:rotateX(180deg)}
+.rv-tumble.is-open .card-inner{transform:rotateX(-180deg)}
+/* REVEAL 3: SLIDE (front pulls up like a card out of a sleeve) */
+.rv-slide{overflow:hidden}
+.rv-slide .card-inner{transform-style:flat}
+.rv-slide .face-front{z-index:2; transition:transform .6s cubic-bezier(.6,-0.05,.3,1)}
+.rv-slide .face-back{z-index:1}
+.rv-slide.is-open .face-front{transform:translateY(-106%) rotate(-3deg)}
+.rv-slide:not(.is-open) .face-back{visibility:hidden; transition:visibility 0s .6s}
+.rv-slide.is-open .face-back{visibility:visible}
+@media (hover:hover){
+  .card:not(.is-open):hover{transform:translateY(-3px) rotate(-.6deg)}
+  .card-wrap:nth-child(even) .card:not(.is-open):hover{transform:translateY(-3px) rotate(.6deg)}
+}
+
+.face-top{display:flex; justify-content:space-between; align-items:flex-start; gap:6px}
+.no{font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; opacity:.78; white-space:nowrap}
+.type-tag{font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:3px 7px; border-radius:999px; border:1px solid currentColor; opacity:.8; white-space:nowrap}
+.face-body{flex:1; display:flex; flex-direction:column; justify-content:center; gap:6px}
+.hl{font-family:var(--serif); font-weight:400; margin:0; line-height:1.02; letter-spacing:-.005em; overflow-wrap:normal; hyphens:manual}
+.hl.md{font-size:22px}
+.hl.lg{font-size:28px}
+.hl.xl{font-size:clamp(32px, 9.4vw, 62px); line-height:.92}
+.span-2 .hl.xl{font-size:clamp(44px, 13vw, 72px)}
+.span-2 .hl.md{font-size:26px}
+.span-2 .hl.lg{font-size:clamp(32px, 9vw, 46px)}
+@media (min-width:900px){ .hl.md{font-size:26px} .hl.lg{font-size:32px} .hl.xl{font-size:56px} .span-2 .hl.lg{font-size:44px} .t-bagtag .hl{font-size:24px} }
+.big{font-family:var(--serif); font-weight:400; margin:0; line-height:.82; letter-spacing:-.03em; font-size:clamp(84px, 26vw, 150px)}
+.span-2 .big{font-size:clamp(120px, 42vw, 220px)}
+.sub{margin:0; font-size:16px; font-weight:600; line-height:1.3}
+.face-foot{display:flex; justify-content:space-between; align-items:center; min-height:24px}
+.flip-hint{font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; opacity:.85}
+.flip-hint svg{width:14px; height:14px}
+.found{display:none; align-items:center; gap:4px; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:4px 8px; border-radius:999px; background:var(--gold); color:var(--pine)}
+.card.is-found .found{display:inline-flex}
+.card.is-found .flip-hint{display:none}
+.art{display:flex; align-items:center}
+.art svg{width:56px; height:56px}
+.span-2 .art svg{width:68px; height:68px}
+
+/* ---- FRONT TREATMENTS ---- */
+.t-type{background:var(--cream); color:var(--pine); border:1px solid rgba(23,60,48,.14)}
+.t-type .sub{color:var(--kelly)}
+.t-number{background:var(--scorecard); color:var(--pine);
+  background-image:linear-gradient(rgba(23,60,48,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(23,60,48,.08) 1px, transparent 1px); background-size:22px 22px}
+.t-number .big{color:var(--kelly)}
+.t-bagtag{background:var(--walnut); color:var(--cream);
+  background-image:repeating-linear-gradient(115deg, rgba(0,0,0,.06) 0 2px, transparent 2px 7px)}
+.t-bagtag .face-body{flex:1; background:var(--cream); color:var(--pine); border-radius:12px; padding:32px 12px 14px; position:relative; box-shadow:inset 0 0 0 2px var(--sand), inset 0 0 0 5px var(--cream), inset 0 0 0 6px rgba(90,70,54,.35), 0 6px 12px -6px rgba(0,0,0,.5)}
+.t-bagtag .face-body::before{content:""; position:absolute; top:11px; left:50%; width:30px; height:10px; margin-left:-15px; border-radius:6px; background:var(--walnut); box-shadow:inset 0 2px 3px rgba(0,0,0,.5)}
+.t-bagtag .hl{font-size:19px; text-transform:uppercase; letter-spacing:.04em; text-align:center; text-shadow:0 1px 0 #fff, 0 -1px 0 rgba(23,60,48,.25)}
+.t-bagtag .sub{text-align:center; color:var(--walnut)}
+.t-vintage{background:var(--cream); color:var(--pine); box-shadow:var(--shadow), inset 0 0 0 6px var(--cream), inset 0 0 0 7px var(--pine), inset 0 0 0 10px var(--cream), inset 0 0 0 11px rgba(23,60,48,.5); padding:18px}
+.t-vintage .art svg{color:var(--kelly)}
+.t-vintage .sub{font-family:var(--serif); font-style:italic; font-weight:400; font-size:19px; color:var(--walnut)}
+.t-blue{background:var(--club); color:var(--cream)}
+.t-kelly{background:var(--kelly); color:var(--cream)}
+.t-navy{background:var(--navy); color:var(--cream); background-image:var(--topo-light)}
+.t-gold{background:var(--gold); color:var(--pine); background-image:radial-gradient(circle at 80% 20%, rgba(255,255,255,.35), transparent 45%)}
+.t-blush{background:var(--blush); color:var(--pine)}
+.t-object{background:var(--sand); color:var(--pine)}
+.t-object .art svg{width:80px; height:80px}
+.span-2 .t-object .art svg{width:96px; height:96px}
+.t-photo{background:var(--pine); color:var(--cream); background-image:var(--topo-light)}
+.polaroids{display:flex; gap:8px; align-items:flex-end; justify-content:center; padding:4px 0}
+.polaroid{background:var(--cream); padding:6px 6px 20px; border-radius:3px; box-shadow:0 8px 14px -8px rgba(0,0,0,.6); width:30%; max-width:110px}
+.polaroid span{display:grid; place-items:center; aspect-ratio:1; background:var(--fairway); color:rgba(245,241,231,.6); font-family:var(--serif); font-size:34px}
+.polaroid:nth-child(1){transform:rotate(-7deg)} .polaroid:nth-child(2){transform:rotate(2deg) translateY(-6px)} .polaroid:nth-child(3){transform:rotate(8deg)}
+.photo-real{width:100%; border-radius:10px; aspect-ratio:4/3; object-fit:cover}
+.ribbon{align-self:flex-start; background:var(--gold); color:var(--pine); font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:4px 8px; border-radius:3px; line-height:1.3}
+.sparkle{position:absolute; color:var(--gold); opacity:.85; pointer-events:none}
+.sparkle svg{width:100%; height:100%}
+@media (prefers-reduced-motion:no-preference){ .sparkle{animation:twinkle 3.6s ease-in-out infinite} .sparkle.s2{animation-delay:1.2s} .sparkle.s3{animation-delay:2.4s} }
+@keyframes twinkle{0%,100%{opacity:.3; transform:scale(.8)} 50%{opacity:1; transform:scale(1)}}
+
+/* ---- FEATURED SPONSORS (driven by featured/priority in the data) ---- */
+.card-wrap.featured .face{box-shadow:0 18px 30px -18px rgba(23,60,48,.7), inset 0 0 0 2px var(--gold), inset 0 0 0 5px rgba(200,154,69,.25)}
+.card-wrap.featured .face-back{border-color:var(--gold)}
+.feat-chip svg{width:12px; height:12px}
+.feat-chip{display:inline-flex; align-items:center; gap:5px; align-self:flex-start; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--pine); background:var(--gold); padding:4px 8px; border-radius:3px}
+.t-tailgate{background:var(--pine); color:var(--cream); padding-bottom:34px; background-image:var(--topo-light)}
+.t-tailgate::after{content:""; position:absolute; left:0; right:0; bottom:0; height:22px;
+  background:linear-gradient(90deg, rgba(22,116,71,.9) 50%, transparent 50%) 0 0/22px 22px, linear-gradient(rgba(22,116,71,.9) 50%, transparent 50%) 0 0/22px 22px, var(--cream); opacity:.95}
+.t-tailgate .art{gap:10px; color:var(--gold)}
+.t-tailgate .hl{color:var(--cream)}
+.t-tailgate .sub{color:var(--gold); font-family:var(--serif); font-style:italic; font-weight:400; font-size:21px}
+.t-tailgate .flip-hint{color:var(--gold); opacity:1}
+.t-jewel{color:var(--pine); background:linear-gradient(140deg, #f7efe6 0%, #efd9d3 55%, var(--blush) 100%);
+  box-shadow:var(--shadow), inset 0 0 0 6px rgba(255,255,255,.35), inset 0 0 0 7px var(--gold), inset 0 0 0 10px rgba(255,255,255,.2), inset 0 0 0 11px rgba(200,154,69,.55); padding:18px}
+.t-jewel .art svg{color:var(--gold-deep)}
+.t-jewel .hl{font-style:italic}
+.t-jewel .sub{font-family:var(--serif); font-style:italic; font-weight:400; font-size:19px; color:var(--walnut)}
+.t-mat{background:var(--navy); color:var(--cream);
+  background:radial-gradient(circle at 80% 30%, transparent 0 30px, rgba(200,154,69,.6) 30px 33px, transparent 33px 70px, rgba(245,241,231,.22) 70px 74px, transparent 74px) no-repeat, repeating-linear-gradient(180deg, transparent 0 24px, rgba(245,241,231,.06) 24px 26px), var(--navy)}
+.t-mat .art svg{color:var(--gold)}
+.t-mat .sub2{margin:4px 0 0; font-weight:800; letter-spacing:.1em; text-transform:uppercase; font-size:14px; color:var(--gold)}
+.sub2{margin:4px 0 0; font-weight:800; letter-spacing:.1em; text-transform:uppercase; font-size:14px}
+.level{display:inline-flex; align-items:center; gap:6px; align-self:flex-start; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; line-height:1.3;
+  color:var(--pine); border:1.5px solid rgba(23,60,48,.45); border-radius:4px; padding:4px 8px 4px 7px; background:rgba(255,255,255,.5)}
+.level svg{width:12px; height:12px; flex:none}
+.level.feat{border-color:var(--gold); background:linear-gradient(135deg, #e3c27f, var(--gold)); color:var(--pine)}
+.offline{align-self:stretch; display:flex; align-items:center; gap:8px; background:var(--pine); color:var(--gold); border:1.5px dashed var(--gold); border-radius:8px; padding:6px 10px; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; line-height:1.25}
+.offline svg{width:16px; height:16px; flex:none}
+.back-fine{margin:0; font-size:14px; font-style:italic; color:var(--muted)}
+.brand-line{margin:4px 0 0; font-family:var(--serif); font-size:30px; line-height:1; color:var(--kelly)}
+.span-2 .brand-line{font-size:clamp(32px, 9vw, 44px)}
+
+/* ---- BACK FACE ---- */
+.face-back{background:var(--cream); color:var(--ink); background-image:var(--topo-dark); border:1px solid rgba(23,60,48,.14)}
+.face-back .no{color:var(--kelly)}
+.back-hl{font-family:var(--serif); font-weight:400; font-size:25px; line-height:1.02; margin:2px 0 0; color:var(--pine)}
+.span-2 .back-hl{font-size:30px}
+.back-sub{margin:0; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--club)}
+.back-copy{margin:0; font-size:16px; line-height:1.4}
+.kicker-big{margin:2px 0 0; font-family:var(--serif); font-size:24px; line-height:1.02; color:var(--kelly)}
+.span-2 .kicker-big{font-size:32px}
+.logo{max-height:44px; max-width:70%; object-fit:contain; align-self:flex-start}
+.stamp{margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep);
+  border:2px solid var(--gold); border-radius:6px; padding:4px 8px; transform:rotate(-4deg); opacity:0}
+.stamp svg{width:14px; height:14px}
+.stamp path{stroke-dasharray:24; stroke-dashoffset:24}
+.card.is-found .stamp{opacity:1}
+.card.is-found .stamp path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:no-preference){
+  .card.just-found .stamp{animation:stampIn .45s cubic-bezier(.3,1.6,.5,1) both}
+  .card.just-found .stamp path{transition:stroke-dashoffset .5s .25s ease-out}
+}
+@keyframes stampIn{0%{opacity:0; transform:rotate(-14deg) scale(1.7)} 100%{opacity:1; transform:rotate(-4deg) scale(1)}}
+.b-wild{background:var(--navy); color:var(--cream); background-image:var(--topo-light); border:2px solid var(--gold)}
+.b-wild .back-hl, .b-wild .no{color:var(--gold)}
+.b-wild .stamp{color:var(--gold); border-color:var(--gold)}
+.card-link{margin-top:6px; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; align-self:flex-start; min-height:44px; display:inline-flex; align-items:center}
+
+/* Reduced motion: fade/state swap instead of 3D */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card-inner, .rv-flip.is-open .card-inner, .rv-tumble.is-open .card-inner{transform:none!important; transition:none}
+  .face, .rv-slide.is-open .face-front{transform:none!important; transition:opacity .2s ease, visibility .2s}
+  .card .face-back{opacity:0; visibility:hidden}
+  .card.is-open .face-back{opacity:1; visibility:visible}
+  .card.is-open .face-front{opacity:0; visibility:hidden}
+  .card:hover{transform:none!important}
+}
+
+/* =========================================================
+   05. INTERSTITIALS — deliberately NOT cards
+   ========================================================= */
+.inter{max-width:1180px; margin:36px auto; padding:0 16px}
+.inter h2{margin:0}
+
+/* Score slip (Would You Rather) */
+.slip{background:#fffdf7; border-radius:4px; padding:24px 18px 18px; position:relative; box-shadow:var(--shadow);
+  background-image:repeating-linear-gradient(transparent 0 31px, rgba(77,117,171,.14) 31px 32px); max-width:640px; margin:0 auto}
+.slip::before, .slip::after{content:""; position:absolute; left:0; right:0; height:10px;
+  background:radial-gradient(circle at 7px 0, var(--cream) 5px, transparent 5.5px) 0 0/14px 10px repeat-x}
+.slip::before{top:-1px} .slip::after{bottom:-1px; transform:scaleY(-1)}
+.slip .caps{color:var(--club)}
+.slip h2{font-family:var(--serif); font-weight:400; font-size:clamp(34px,9vw,52px); color:var(--pine); line-height:1; margin:6px 0 14px}
+.wyr-opts{display:grid; gap:8px}
+.opt{min-height:56px; border-radius:10px; border:2px solid var(--pine); background:rgba(255,253,247,.9); text-align:left; padding:12px 14px; font-weight:700; font-size:17px; color:var(--pine); transition:background .15s, color .15s, transform .15s}
+.opt:active{transform:scale(.99)}
+.opt[aria-pressed="true"]{background:var(--pine); color:var(--cream)}
+.opt[aria-pressed="true"]::after{content:"  ✓"}
+.or{font-family:var(--serif); font-style:italic; font-size:22px; text-align:center; color:var(--kelly); line-height:1}
+.resp{margin:14px 0 0; font-size:17px; font-weight:600; color:var(--kelly)}
+.resp:empty{display:none}
+.resp small{display:block; font-weight:500; color:var(--muted); font-size:14px; margin-top:4px}
+.linkish{background:none; border:0; padding:0 4px; min-height:44px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; font-size:13px; color:var(--club)}
+.slip-foot{display:flex; justify-content:space-between; align-items:center; margin-top:10px; gap:8px}
+
+/* Pin flag / yardage marker (Call the Shot) */
+.yard{display:grid; grid-template-columns:48px 1fr; gap:0 12px; max-width:720px; margin:0 auto; align-items:stretch}
+.pin{position:relative; min-height:220px}
+.pin::before{content:""; position:absolute; left:6px; top:0; bottom:0; width:5px; border-radius:3px; background:linear-gradient(var(--cream), var(--sand)); box-shadow:inset -1px 0 0 rgba(0,0,0,.15)}
+.pin svg{position:absolute; left:8px; top:6px; width:42px; height:36px}
+.yard-body{background:var(--kelly); color:var(--cream); border-radius:var(--r); padding:18px 16px; background-image:var(--topo-light); box-shadow:var(--shadow)}
+.yard-body .caps{color:var(--gold)}
+.yard-dist{font-family:var(--serif); font-size:clamp(56px,17vw,96px); line-height:.9; margin:6px 0 6px}
+.yard-q{font-size:17px; font-weight:600; margin:0 0 14px}
+.clubs{display:grid; grid-template-columns:repeat(4,1fr); gap:8px}
+.clubs.two{grid-template-columns:repeat(2,1fr)}
+.clubbtn{min-height:56px; border-radius:12px; border:2px solid rgba(245,241,231,.6); background:transparent; color:var(--cream); font-weight:800; font-size:16px; padding:6px}
+.clubbtn[aria-pressed="true"]{background:var(--cream); color:var(--kelly); border-color:var(--cream)}
+.clubbtn[aria-pressed="true"]::after{content:" ✓"}
+.yard .resp{color:var(--cream)}
+.yard .resp small{color:rgba(245,241,231,.8)}
+.yard .linkish{color:var(--gold)}
+
+/* Tournament ticket (Trivia) */
+.ticket-game{max-width:720px; margin:0 auto; background:var(--navy); color:var(--cream); border-radius:12px; position:relative; box-shadow:var(--shadow); overflow:hidden}
+.tg-stub{background:var(--gold); color:var(--pine); padding:10px 18px; display:flex; justify-content:space-between; align-items:center; gap:8px; position:relative}
+.tg-stub::after{content:""; position:absolute; left:14px; right:14px; bottom:-1px; border-bottom:2px dashed rgba(23,60,48,.45)}
+.tg-body{padding:18px 18px 12px}
+.tg-body h2{font-family:var(--serif); font-weight:400; font-size:clamp(30px, 8vw, 44px); line-height:1; margin:0 0 8px}
+.tg-q{font-size:18px; font-weight:600; margin:0 0 14px}
+.answers{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.ans{min-height:56px; border-radius:10px; border:2px solid rgba(245,241,231,.45); background:rgba(245,241,231,.05); color:var(--cream); font-weight:700; font-size:16px; text-align:left; padding:10px 12px}
+.ans.right{background:var(--kelly); border-color:var(--kelly)}
+.ans.right::after{content:" ✓ Correct"; display:block; font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.ans.wrong{border-style:dashed; opacity:.75}
+.ans.wrong::after{content:" ✗ Nope"; display:block; font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.ans[disabled]{cursor:default}
+.ticket-game .resp{color:var(--cream)}
+.ticket-game .resp small{color:rgba(245,241,231,.8)}
+.ticket-game .linkish{color:var(--gold)}
+.notch{position:absolute; width:22px; height:22px; border-radius:50%; background:var(--cream); top:31px; z-index:2}
+.notch.l{left:-11px} .notch.r{right:-11px}
+
+/* Betting slip (This or That) */
+.betslip{max-width:640px; margin:0 auto; background:#fffdf7; border:1px solid rgba(23,60,48,.2); border-radius:6px; box-shadow:var(--shadow); padding:0 0 14px}
+.bs-head{background:var(--pine); color:var(--cream); padding:14px 16px; border-radius:6px 6px 0 0; display:flex; justify-content:space-between; align-items:flex-end; gap:10px}
+.bs-head h2{font-family:var(--serif); font-weight:400; font-size:clamp(30px,8.5vw,44px); line-height:1}
+.bs-head .caps{color:var(--gold)}
+.bs-row{display:grid; grid-template-columns:1fr auto 1fr; gap:8px; align-items:center; padding:10px 14px; border-bottom:1px dashed rgba(23,60,48,.22)}
+.bs-row .vs{font-family:var(--serif); font-style:italic; color:var(--kelly); font-size:18px}
+.pick{min-height:48px; border-radius:8px; border:2px solid rgba(23,60,48,.35); background:transparent; font-weight:700; font-size:16px; color:var(--pine); padding:6px 8px; line-height:1.2}
+.pick[aria-pressed="true"]{background:var(--kelly); border-color:var(--kelly); color:var(--cream)}
+.pick[aria-pressed="true"]::before{content:"✓ "}
+.bs-quip{grid-column:1/-1; margin:0; font-size:15px; color:var(--muted); font-style:italic}
+.bs-quip:empty{display:none}
+.bs-total{padding:12px 16px 0; margin:0; font-weight:700; color:var(--pine)}
+.bs-total:empty{display:none}
+
+/* Course markers (Physical challenges) */
+.markers{display:grid; gap:14px; max-width:1180px; margin:0 auto}
+.markers.solo{max-width:720px}
+@media (min-width:900px){ .markers.two{grid-template-columns:1fr 1fr} }
+.marker{display:grid; grid-template-columns:60px 1fr; gap:14px; align-items:start; background:var(--scorecard); border-radius:var(--r); padding:16px; box-shadow:var(--shadow); position:relative; border-left:8px solid var(--club)}
+.marker.req{border-left-color:var(--gold); background:#efe6d0}
+.tee-marker{width:60px; height:60px; border-radius:50%; display:grid; place-items:center; background:var(--club); color:var(--cream); box-shadow:inset 0 -6px 0 rgba(0,0,0,.18), 0 6px 10px -6px rgba(0,0,0,.5)}
+.marker.req .tee-marker{background:var(--gold); color:var(--pine)}
+.tee-marker svg{width:28px; height:28px}
+.marker .tag{display:inline-block; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:3px 8px; border-radius:999px; background:var(--pine); color:var(--cream)}
+.marker.req .tag{background:var(--gold-deep); color:#fff}
+.marker h2{font-family:var(--serif); font-weight:400; font-size:clamp(28px,7.5vw,38px); line-height:1; color:var(--pine); margin:8px 0 6px}
+.marker p{margin:0 0 12px}
+.actions{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.btn{min-height:48px; border-radius:999px; padding:0 18px; border:2px solid var(--pine); background:var(--pine); color:var(--cream); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:13px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; justify-content:center; text-align:center}
+.btn.ghost{background:transparent; color:var(--pine)}
+.btn.venmo{background:var(--navy); border-color:var(--navy); color:#fff}
+.btn.confirming{background:var(--gold); border-color:var(--gold); color:var(--pine)}
+.btn.done{background:transparent; border-style:dashed; color:var(--kelly); border-color:var(--kelly); cursor:default}
+.venmo-note{font-size:14px; color:var(--muted); margin:12px 0 0!important}
+.venmo-note code{font-family:var(--sans); font-weight:700; color:var(--pine); background:rgba(255,255,255,.7); padding:1px 6px; border-radius:4px}
+.honor{font-size:13px; color:var(--muted); margin:8px 0 0!important; font-style:italic}
+
+/* Swag */
+.swag{background:var(--pine); color:var(--cream); padding:42px 0 36px; margin:44px 0; background-image:var(--topo-light)}
+.swag .wrap > .caps{color:var(--gold); margin:0}
+.swag-title{font-family:var(--serif); font-weight:400; font-size:clamp(48px, 14vw, 110px); line-height:.9; margin:8px 0 4px}
+.swag-sub{font-family:var(--serif); font-style:italic; font-size:24px; color:var(--gold); margin:0 0 18px}
+.stage{position:relative; aspect-ratio:4/3.3; max-width:760px; margin:0 auto; border-radius:18px; overflow:hidden;
+  background:
+   repeating-linear-gradient(0deg, rgba(90,70,54,.06) 0 1px, transparent 1px 4px),
+   repeating-linear-gradient(90deg, rgba(90,70,54,.05) 0 1px, transparent 1px 4px),
+   linear-gradient(180deg, #ece3cd, #d3c4a7);
+  box-shadow:inset 0 0 60px rgba(90,70,54,.35), 0 20px 40px -20px rgba(0,0,0,.6)}
+.stage::after{content:""; position:absolute; left:0; right:0; bottom:0; height:36%;
+  background:linear-gradient(180deg, rgba(0,0,0,.35), transparent 14%), repeating-linear-gradient(180deg, #5A4636 0 32%, #47372a 32% 34%);
+  background-size:100% 100%, 100% 50%}
+.swag-item{position:absolute; border:0; background:transparent; padding:0; z-index:2; transition:transform .35s cubic-bezier(.3,1.3,.5,1), opacity .3s, filter .3s; filter:drop-shadow(0 10px 10px rgba(0,0,0,.35)); transform:rotate(var(--rot,0deg))}
+.swag-item svg{width:100%; height:auto; display:block}
+.stage.has-focus .swag-item{opacity:.35; filter:grayscale(.6) drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.stage.has-focus .swag-item.is-focus{opacity:1; filter:drop-shadow(0 18px 16px rgba(0,0,0,.45)); transform:translateY(-8px) scale(1.08) rotate(var(--rot,0deg)); z-index:4}
+.si-bag{left:5%; top:8%; width:52%; --rot:-3deg}
+.si-cup{right:9%; top:4%; width:20%; --rot:4deg}
+.si-hat{left:4%; bottom:9%; width:46%; --rot:-2deg}
+.si-acc{right:5%; bottom:24%; width:36%; --rot:3deg}
+@media (hover:hover){ .stage:not(.has-focus) .swag-item:hover{transform:translateY(-4px) rotate(var(--rot,0deg))} }
+@media (prefers-reduced-motion:no-preference){
+  .stage.intro .swag-item{animation:drop .6s cubic-bezier(.3,1.4,.5,1) both}
+  .stage.intro .si-cup{animation-delay:.1s} .stage.intro .si-hat{animation-delay:.2s} .stage.intro .si-acc{animation-delay:.3s}
+}
+@keyframes drop{from{opacity:0; transform:translateY(-30px) rotate(var(--rot,0deg))} to{opacity:1; transform:rotate(var(--rot,0deg))}}
+.credit-tag{position:absolute; right:3%; bottom:3%; z-index:3; background:var(--cream); color:var(--pine); font-size:11px; line-height:1.25; padding:5px 9px 5px 12px; border-radius:3px; box-shadow:0 4px 8px -4px rgba(0,0,0,.6); max-width:48%; transform:rotate(-2deg)}
+.credit-tag::before{content:""; position:absolute; left:4px; top:50%; width:5px; height:5px; margin-top:-2.5px; border-radius:50%; background:var(--walnut)}
+.credit-tag b{display:block; font-weight:800}
+.egg-wrap{position:absolute; z-index:3}
+.swag-label{max-width:760px; margin:16px auto 0; min-height:96px; background:var(--cream); color:var(--pine); border-radius:12px; padding:14px 16px; display:grid; gap:2px; align-content:center}
+.swag-label .caps{color:var(--kelly)}
+.swag-label strong{font-family:var(--serif); font-weight:400; font-size:26px; line-height:1.05}
+.swag-label span{font-size:16px}
+.swag-dots{display:flex; gap:6px; justify-content:center; margin-top:12px}
+.swag-dots i{width:9px; height:9px; border-radius:50%; border:1.5px solid var(--gold)}
+.swag-dots i.on{background:var(--gold)}
+.more{max-width:760px; margin:28px auto 0; display:grid; gap:10px; text-align:center; justify-items:center}
+.more h3{font-family:var(--serif); font-weight:400; font-size:clamp(40px,11vw,64px); line-height:1; margin:0}
+.more p{margin:0; max-width:34ch; color:rgba(245,241,231,.88)}
+.more .note{font-size:15px; color:var(--gold); min-height:20px; font-weight:600}
+
+/* Clubhouse Key credential */
+.key{max-width:560px; margin:52px auto 30px; padding:0 16px; outline:none}
+.credential{background:var(--cream); border-radius:18px; box-shadow:0 30px 50px -30px rgba(23,60,48,.7), 0 0 0 1px rgba(23,60,48,.15); position:relative; overflow:hidden}
+.lanyard{height:42px; background:var(--kelly); position:relative; background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 10px, transparent 10px 20px)}
+.lanyard::after{content:""; position:absolute; left:50%; top:24px; width:46px; height:10px; margin-left:-23px; border-radius:6px; background:var(--cream); box-shadow:inset 0 2px 3px rgba(0,0,0,.35)}
+.cred-body{padding:18px 18px 22px}
+.cred-body > .caps{color:var(--kelly); margin:0; display:flex; align-items:center}
+.cred-body h2{font-family:var(--serif); font-weight:400; color:var(--pine); font-size:clamp(34px,9vw,48px); line-height:1; margin:6px 0 4px}
+.cred-status{font-family:var(--serif); font-size:clamp(32px, 9vw, 46px); line-height:1; color:var(--kelly); margin:14px 0 6px}
+.cred-status.met{color:var(--gold-deep)}
+.cred-hint{margin:0 0 14px; font-weight:600}
+.reqs{list-style:none; margin:0 0 16px; padding:0; display:grid; gap:8px}
+.reqs li{display:grid; grid-template-columns:32px 1fr auto; gap:10px; align-items:center; background:#fff; border-radius:10px; padding:10px 12px; border:1px solid rgba(23,60,48,.12); min-height:52px}
+.reqs .box{width:30px; height:30px; border-radius:8px; border:2px solid var(--pine); display:grid; place-items:center; font-weight:800}
+.reqs li.ok .box{background:var(--kelly); border-color:var(--kelly); color:var(--cream)}
+.reqs .st{font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); white-space:nowrap}
+.reqs li.ok .st{color:var(--kelly)}
+.reqs a{font-weight:700; color:var(--pine)}
+.cred-credits{display:flex; align-items:center; gap:10px; margin:0 0 16px; padding:10px 12px; border-radius:10px; background:var(--pine); color:var(--cream)}
+.cred-credits .chip{width:34px; height:34px; flex:none; border-radius:50%; background:var(--gold); color:var(--pine); display:grid; place-items:center; font-weight:800}
+.cred-credits small{display:block; opacity:.8; font-size:13px}
+.cred-actions{display:grid; gap:10px}
+.cred-actions .cta{width:100%}
+.claimed-line{margin:12px 0 0; font-weight:700; color:var(--kelly)}
+.claimed-line:empty{display:none}
+
+/* Footer */
+.foot{padding:30px 16px 120px; text-align:center; color:var(--muted); font-size:14px}
+.foot .serif{font-size:22px; color:var(--pine); display:block; margin-bottom:4px}
+.gear{margin-top:10px; background:none; border:0; min-height:44px; padding:0 12px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--muted); opacity:.75}
+
+/* =========================================================
+   06. WIDGET, DRAWER, DIALOGS, TOAST
+   ========================================================= */
+.widget{position:fixed; right:14px; bottom:calc(14px + env(safe-area-inset-bottom)); z-index:40; display:flex; align-items:center; gap:8px; min-height:52px; padding:6px 14px 6px 6px; border-radius:999px; border:0;
+  background:var(--pine); color:var(--cream); box-shadow:0 12px 24px -10px rgba(0,0,0,.6), 0 0 0 2px rgba(200,154,69,.6); text-align:left}
+.widget .chip{width:40px; height:40px; border-radius:50%; background:var(--gold); color:var(--pine); display:grid; place-items:center; font-weight:800; font-size:19px; box-shadow:inset 0 0 0 3px rgba(23,60,48,.25), inset 0 0 0 5px var(--gold)}
+.widget b{font-size:18px; display:block; line-height:1.05}
+.widget small{font-size:11px; font-weight:700; letter-spacing:.1em; opacity:.8; display:block; line-height:1}
+.widget.pulse .chip{animation:pulse .5s ease}
+@keyframes pulse{0%{transform:scale(1)} 40%{transform:scale(1.25)} 100%{transform:scale(1)}}
+.widget.unlocked{box-shadow:0 12px 24px -10px rgba(0,0,0,.6), 0 0 0 3px var(--gold)}
+
+dialog{border:0; padding:0; max-width:none; max-height:none; background:transparent; color:var(--ink)}
+dialog::backdrop{background:rgba(15,30,24,.6)}
+.drawer{width:100%; max-width:520px; margin:auto auto 0; border-radius:22px 22px 0 0; background:var(--cream); padding:10px 18px calc(20px + env(safe-area-inset-bottom)); max-height:88vh; overflow:auto}
+@media (min-width:700px){ .drawer{margin:auto; border-radius:22px} }
+@media (prefers-reduced-motion:no-preference){ .drawer[open]{animation:sheet .32s cubic-bezier(.2,.8,.2,1)} }
+@keyframes sheet{from{transform:translateY(40px); opacity:0} to{transform:none; opacity:1}}
+.grab{width:44px; height:5px; border-radius:3px; background:rgba(23,60,48,.25); margin:0 auto 10px}
+.dr-top{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.x{width:44px; height:44px; border-radius:50%; border:0; background:rgba(23,60,48,.08); font-size:24px; line-height:1; color:var(--pine); flex:none}
+.dr-credits{display:flex; align-items:center; gap:12px; margin:6px 0 14px}
+.dr-credits .chip{width:56px; height:56px; border-radius:50%; background:var(--gold); color:var(--pine); display:grid; place-items:center; font-size:26px; font-weight:800; box-shadow:inset 0 0 0 4px rgba(23,60,48,.25), inset 0 0 0 7px var(--gold)}
+.dr-credits b{font-family:var(--serif); font-weight:400; font-size:40px; line-height:1; color:var(--pine); display:block}
+.dr-stats{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px}
+.dr-stats div{background:#fff; border-radius:10px; padding:10px 12px; border:1px solid rgba(23,60,48,.1)}
+.dr-stats b{font-size:20px; color:var(--pine); display:block}
+.dr-stats span{font-size:13px; color:var(--muted)}
+.dr-key{background:var(--pine); color:var(--cream); border-radius:12px; padding:12px 14px; font-weight:700; margin-bottom:14px}
+.dr-key small{display:block; font-weight:500; opacity:.85; margin-top:2px; font-size:14px}
+.recent h3{font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin:0 0 6px; color:var(--kelly)}
+.recent ul{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.recent li{display:flex; justify-content:space-between; gap:10px; font-size:15px; padding:7px 0; border-bottom:1px dashed rgba(23,60,48,.15)}
+.recent li b{color:var(--gold-deep); white-space:nowrap}
+.recent .empty{color:var(--muted); font-style:italic}
+
+/* Unlock moment + redemption screen */
+.unlock{width:min(420px, calc(100% - 24px)); margin:auto; background:var(--pine); color:var(--cream); background-image:var(--topo-light); border-radius:22px; padding:26px 20px 18px; text-align:center; box-shadow:0 0 0 2px var(--gold)}
+@media (prefers-reduced-motion:no-preference){ .unlock[open]{animation:sheet .4s cubic-bezier(.2,.8,.2,1)} .unlock[open] .unlock-chip{animation:chipIn .7s .15s cubic-bezier(.3,1.5,.5,1) both} }
+@keyframes chipIn{from{transform:translateY(-30px) scale(.4); opacity:0} to{transform:none; opacity:1}}
+.unlock-chip{width:74px; height:74px; margin:0 auto 12px; border-radius:50%; background:var(--gold); color:var(--pine); display:grid; place-items:center; font-size:34px; font-weight:800; box-shadow:inset 0 0 0 5px rgba(23,60,48,.25), inset 0 0 0 9px var(--gold), 0 10px 20px -8px rgba(0,0,0,.6)}
+.unlock .caps{color:var(--gold); margin:0}
+.unlock h2{font-family:var(--serif); font-weight:400; font-size:44px; line-height:.95; margin:6px 0 10px}
+.unlock-prize{display:inline-block; background:var(--cream); color:var(--pine); border-radius:8px; padding:10px 16px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; font-size:14px; border:2px dashed var(--gold); margin-bottom:16px}
+.unlock .cta{width:100%}
+.unlock .linkish{color:rgba(245,241,231,.8); margin-top:6px}
+
+.tix{width:100%; height:100%; max-width:100%; max-height:100%; margin:0; background:var(--pine); background-image:var(--topo-light); color:var(--cream); overflow:auto; padding:calc(16px + env(safe-area-inset-top)) 14px calc(20px + env(safe-area-inset-bottom))}
+.tix-wrap{max-width:440px; margin:0 auto; min-height:100%; display:flex; flex-direction:column; justify-content:center; gap:12px}
+.tix-card{background:linear-gradient(135deg, #dcb468, var(--gold) 40%, #b88934); color:var(--pine); border-radius:18px; padding:22px 20px 18px; position:relative; overflow:hidden; box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.tix-card::before{content:""; position:absolute; inset:8px; border:1.5px solid rgba(23,60,48,.45); border-radius:12px; pointer-events:none}
+.tix-card::after{content:""; position:absolute; top:0; bottom:0; width:40%; left:-60%; background:linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); pointer-events:none}
+@media (prefers-reduced-motion:no-preference){ .tix-card::after{animation:sheen 2.8s ease-in-out infinite} }
+@keyframes sheen{0%{left:-60%} 60%,100%{left:130%}}
+.tix-card .caps{margin:0}
+.tix-kind{font-weight:800; letter-spacing:.16em; text-transform:uppercase; font-size:13px; margin:2px 0 0}
+.tix-big{font-family:var(--serif); font-size:clamp(46px, 13vw, 60px); line-height:.92; margin:12px 0 12px}
+.tix-stats{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.tix-stats div{background:rgba(245,241,231,.35); border-radius:10px; padding:8px 10px}
+.tix-stats b{display:block; font-size:28px; line-height:1}
+.tix-stats span{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase}
+.perf{border-top:2px dashed rgba(23,60,48,.5); margin:16px -20px; position:relative}
+.perf::before, .perf::after{content:""; position:absolute; top:-12px; width:22px; height:22px; border-radius:50%; background:var(--pine)}
+.perf::before{left:-11px} .perf::after{right:-11px}
+.verify{background:var(--pine); color:var(--cream); border-radius:12px; padding:14px; text-align:center; display:grid; gap:4px; justify-items:center}
+.verify-check{width:52px; height:52px; border-radius:50%; background:var(--kelly); display:grid; place-items:center; box-shadow:0 0 0 3px var(--gold)}
+.verify-check svg{width:30px; height:30px; color:var(--cream)}
+.verify b{font-size:20px; letter-spacing:.12em}
+.verify small{font-size:12px; font-weight:600; opacity:.85; letter-spacing:.04em}
+.tix-live{display:flex; align-items:center; justify-content:space-between; gap:8px; font-weight:800; font-size:14px; margin:12px 0 10px; font-variant-numeric:tabular-nums}
+.tix-live span{display:inline-flex; align-items:center; gap:8px}
+.dot{width:10px; height:10px; border-radius:50%; background:var(--kelly); flex:none}
+@media (prefers-reduced-motion:no-preference){ .dot{animation:live 1.4s infinite} }
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(22,116,71,.7)} 100%{box-shadow:0 0 0 10px rgba(22,116,71,0)}}
+.tix-inst{font-weight:800; margin:0; font-size:16px; letter-spacing:.02em; text-transform:uppercase; line-height:1.3}
+.tix-card.is-claimed{background:linear-gradient(135deg, #1d8a57, var(--kelly) 50%, #0f5a36); color:var(--cream)}
+.tix-card.is-claimed::before{border-color:rgba(245,241,231,.5)}
+.tix-card.is-claimed .tix-stats div{background:rgba(245,241,231,.14)}
+.tix-card.is-claimed .perf{border-color:rgba(245,241,231,.5)}
+.tix-card.is-claimed .dot{background:var(--gold)}
+.good-luck{font-family:var(--serif); font-style:italic; font-size:30px; color:var(--gold); margin:0}
+.tix-actions{display:grid; gap:8px}
+.tix-actions .btn{width:100%}
+.btn.light{background:var(--cream); color:var(--pine); border-color:var(--cream)}
+.btn.goldbtn{background:var(--gold); color:var(--pine); border-color:var(--gold); min-height:56px; font-size:15px}
+.btn.goldbtn.confirming{background:var(--cream); border-color:var(--cream)}
+.tix-actions .btn.ghost{color:var(--cream); border-color:rgba(245,241,231,.6)}
+.tix-note{text-align:center; font-size:13px; color:rgba(245,241,231,.75); margin:0}
+
+.settings{width:min(440px, calc(100% - 24px)); margin:auto; background:var(--cream); border-radius:18px; padding:18px}
+.settings h2{font-family:var(--serif); font-weight:400; font-size:30px; margin:0; color:var(--pine)}
+.settings p{color:var(--muted)}
+.settings .row{display:grid; gap:8px; margin:12px 0}
+.demo-box{border:2px dashed var(--club); border-radius:12px; padding:12px; margin-top:14px}
+.demo-box .caps{color:var(--club); margin:0}
+
+.toast{position:fixed; left:50%; bottom:calc(80px + env(safe-area-inset-bottom)); transform:translate(-50%, 20px); opacity:0; z-index:60; pointer-events:none;
+  background:var(--pine); color:var(--cream); padding:11px 18px; border-radius:999px; font-weight:700; box-shadow:0 10px 20px -8px rgba(0,0,0,.6); width:max-content; max-width:calc(100% - 32px); text-align:center; transition:opacity .2s, transform .25s}
+.toast.show{opacity:1; transform:translate(-50%,0)}
+.toast b{color:var(--gold)}
+.token{position:fixed; z-index:70; width:30px; height:30px; border-radius:50%; background:var(--gold); color:var(--pine); display:grid; place-items:center; font-weight:800; pointer-events:none; box-shadow:inset 0 0 0 3px rgba(23,60,48,.25), 0 6px 12px -4px rgba(0,0,0,.5)}
+
+/* Hidden objects */
+.egg{position:absolute; left:0; top:0; width:44px; height:44px; border:0; background:transparent; padding:12px; opacity:.6; z-index:5; transition:opacity .2s}
+.egg svg{width:100%; height:100%}
+.egg:hover{opacity:1}
+.egg.got{opacity:.3; cursor:default}
+.egg.got::after{content:"✓"; position:absolute; right:3px; top:1px; font-size:11px; font-weight:800}
+.egg-inline{position:relative; display:inline-block; width:44px; height:44px; vertical-align:middle; margin:-10px 0}
+</style>
+</head>
+<body>
+<a class="skip" href="#deck">Skip to the Sponsor Deck</a>
+
+<!-- ===================== OPENING ===================== -->
+<header class="open" id="top">
+  <div class="open-inner">
+    <div class="open-top">
+      <!-- ASSET PLACEHOLDER: event logo. Replace this <svg> with <img src="assets/event-logo.svg" alt="Emerson Elementary PTA Golf Outing" class="crest"> -->
+      <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#C89A45" stroke-width="2"/>
+        <circle cx="32" cy="32" r="25" fill="none" stroke="#C89A45" stroke-width="1" stroke-dasharray="2 3"/>
+        <path d="M22 44 L40 18 M42 44 L24 18" stroke="#F5F1E7" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M39 16l4 2-2 3M25 16l-4 2 2 3" stroke="#F5F1E7" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="32" cy="45" r="4.5" fill="#F5F1E7"/>
+        <text x="32" y="58" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="8" fill="#C89A45">IV</text>
+      </svg>
+      <div class="open-org">
+        <span class="caps">Emerson Elementary PTA</span>
+        <strong>4th Annual Golf Outing</strong>
+      </div>
+    </div>
+    <p class="open-meta"><span class="m" id="meta-date"></span><span class="m" id="meta-course"></span><span class="egg-inline" data-egg-slot="1"></span></p>
+
+    <h1>Think you can unlock the <em>clubhouse?</em></h1>
+    <p class="open-lede">Flip every card. Grab your 50/50 and raffle tickets. Participate in the putting competition. Do that, and there’s a Door Prize Ticket with your name on it.</p>
+
+    <div class="preview">
+      <button type="button" data-jump aria-label="Jump to the Sponsor Deck"><span class="pv pv1"><span><b>8.2</b><small>Who?</small></span></span></button>
+      <button type="button" data-jump aria-label="Jump to the Sponsor Deck"><span class="pv pv2"><span><b>???</b><small>Guess who</small></span></span></button>
+      <button type="button" data-jump aria-label="Jump to the Sponsor Deck"><span class="pv pv3"><span><b>DO NOT FLIP</b></span></span></button>
+      <span class="preview-note" aria-hidden="true">You know you want to.</span>
+    </div>
+
+    <div class="hero-play">
+      <a class="cta gold" href="#deck" id="letsplay">Let’s play <span aria-hidden="true">→</span></a>
+      <div class="counters" aria-live="polite">
+        <div class="counter"><span class="mini-card" aria-hidden="true"></span><div><b id="c-secrets">0 / 23</b><small>Secrets uncovered</small></div></div>
+        <div class="counter"><span class="chip" aria-hidden="true">♣</span><div><b id="c-credits">0</b><small>Clubhouse Credits</small></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="start wrap" id="deck" aria-labelledby="deck-title" tabindex="-1">
+    <h2 id="deck-title">START <em>FLIPPING.</em></h2>
+  </section>
+
+  <!-- Everything below is generated from FEED (JS section 05), so the rhythm is easy to re-order. -->
+  <div id="feed"></div>
+</main>
+
+<footer class="foot">
+  <span class="serif">Made in Emerson, for Emerson.</span>
+  Emerson Elementary PTA · 4th Annual Golf Outing <span class="egg-inline" data-egg-slot="6"></span>
+  <br>
+  <button type="button" class="gear" id="open-settings">⚙ Settings</button>
+</footer>
+
+<!-- Persistent Clubhouse Credit widget -->
+<button type="button" class="widget" id="widget" aria-haspopup="dialog" aria-expanded="false" aria-controls="drawer">
+  <span class="chip" aria-hidden="true">♣</span>
+  <span><b id="w-credits">0</b><small id="w-secrets">0/23</small></span>
+  <span class="sr-only">Clubhouse Credits and secrets uncovered. Open your progress.</span>
+</button>
+
+<!-- Drawer -->
+<dialog id="drawer" class="drawer" aria-labelledby="dr-title">
+  <div class="grab" aria-hidden="true"></div>
+  <div class="dr-top"><span class="caps" id="dr-title" style="color:var(--kelly)">Your Clubhouse</span><button type="button" class="x" data-close aria-label="Close">×</button></div>
+  <div class="dr-credits"><span class="chip" aria-hidden="true">♣</span><div><b id="dr-credits">0</b><span>Clubhouse Credits</span></div></div>
+  <div class="dr-stats">
+    <div><b id="dr-secrets">0 / 23</b><span>Secrets uncovered</span></div>
+    <div><b id="dr-found">0</b><span>Hidden finds</span></div>
+  </div>
+  <div class="dr-key" id="dr-key">—</div>
+  <div class="recent"><h3>Recent</h3><ul id="dr-recent"></ul></div>
+  <div style="margin-top:14px"><button type="button" class="btn" id="dr-gokey" style="width:100%">See my Clubhouse Key</button></div>
+</dialog>
+
+<!-- Unlock moment -->
+<dialog id="unlocked" class="unlock" aria-labelledby="unl-title">
+  <div class="unlock-chip" aria-hidden="true">♣</div>
+  <p class="caps">Hold up.</p>
+  <h2 id="unl-title">YOU JUST UNLOCKED SOMETHING.</h2>
+  <div class="unlock-prize">Door Prize Raffle Ticket</div>
+  <button type="button" class="cta gold" id="unl-claim">Claim my ticket</button>
+  <button type="button" class="linkish" data-close>Later</button>
+</dialog>
+
+<!-- Redemption screen (full screen). Two separate stored states: raffleTicketUnlocked / raffleTicketClaimed -->
+<dialog id="ticket" class="tix" aria-labelledby="tix-title">
+  <div class="tix-wrap">
+    <div class="tix-card" id="tix-card">
+      <p class="caps">Emerson Elementary PTA</p>
+      <p class="tix-kind" id="tix-kind">Door Prize Entry</p>
+      <p class="tix-big" id="tix-title">YOU UNLOCKED IT.</p>
+      <div class="tix-stats">
+        <div><b id="tix-cr">0</b><span>Clubhouse Credits</span></div>
+        <div><b id="tix-sec">0 / 23</b><span>Secrets Uncovered</span></div>
+      </div>
+      <div class="perf" aria-hidden="true"></div>
+      <div class="verify" id="tix-verify">
+        <span class="verify-check" aria-hidden="true"></span>
+        <b>CLUBHOUSE UNLOCKED ✓</b>
+        <small id="tix-event"></small>
+      </div>
+      <p class="tix-live"><span><span class="dot" aria-hidden="true"></span>LIVE · <time id="tix-clock"></time></span><span id="tix-code">—</span></p>
+      <p class="tix-inst" id="tix-inst">Show this screen to a PTA volunteer to receive your Door Prize Raffle Ticket.</p>
+      <p class="good-luck" id="tix-luck" hidden>Good luck.</p>
+    </div>
+    <div class="tix-actions">
+      <button type="button" class="btn goldbtn" id="tix-got">I got my ticket</button>
+      <p class="tix-note" id="tix-got-note">Tap after the volunteer hands you your raffle ticket.</p>
+      <button type="button" class="btn light" id="tix-share">Show the foursome</button>
+      <button type="button" class="btn ghost" data-close>Close</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Settings / debug -->
+<dialog id="settings" class="settings" aria-labelledby="set-title">
+  <div class="dr-top"><h2 id="set-title">Settings</h2><button type="button" class="x" data-close aria-label="Close">×</button></div>
+  <p>Your progress lives on this phone only. Resetting can’t be undone.</p>
+  <div class="row"><button type="button" class="btn ghost" id="reset-btn">Reset my progress</button></div>
+  <!-- DEMO-ONLY CONTROLS: shown only when CONFIG.demoMode is true or the URL ends with ?demo -->
+  <div class="demo-box" id="demo-box" hidden>
+    <p class="caps">Demo mode · testing only</p>
+    <div class="row">
+      <button type="button" class="btn" data-demo="flipmost">Discover all but one sponsor</button>
+      <button type="button" class="btn" data-demo="flipall">Discover every sponsor</button>
+      <button type="button" class="btn" data-demo="tickets">Mark 50/50 + raffle bought</button>
+      <button type="button" class="btn" data-demo="credits">Add 5 test credits</button>
+      <button type="button" class="btn" data-demo="unclaim">Undo “I got my ticket”</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =========================================================================
+   01. CONFIGURATION — edit these values; nothing else needs to change.
+   ========================================================================= */
+const CONFIG = {
+  eventDateShort: "Mon · Oct 5, 2026",
+  course: "Patriot Hills Golf Club",
+
+  // What unlocks the Door Prize Raffle Ticket.
+  // PTA rule: every sponsor card + 50/50 purchase + raffle purchase. Everything else is bonus.
+  unlock: {
+    requireAllSponsors: true,
+    requireFiftyFifty: true,
+    requireRaffle: true,
+    minCredits: 25           // RAFFLE_UNLOCK_CREDITS — minimum Clubhouse Credits, on top of the checklist
+  },
+
+  // Clubhouse Credit values
+  sponsorDiscoveryCredits: 1,
+  allSponsorsBonus: 3,
+  triviaCredits: 1,
+  miniGameCredits: 1,        // first play of Would You Rather / Call the Shot
+  thisOrThatCredits: 1,      // finishing the full This or That slip
+  swagExploreCredits: 1,     // tapping every item in the swag bag
+  puttingCredits: 10,        // optional, but the biggest single bonus
+  rafflePurchaseCredits: 3,
+  fiftyFiftyCredits: 3,
+  scavengerHuntCredits: 5,
+  hiddenObjectCredits: 1,
+  hiddenObjectCount: 5,      // how many hidden objects appear (6 slots exist)
+
+  // Links
+  swagOrderFormUrl: "",      // SWAG_ORDER_FORM_URL — paste the order form link here. Empty = "ask a board member".
+  venmoHandle: "EmersonNJElementaryPTA",
+  venmoNotes: {
+    fiftyFifty: "Golf Outing 2026 - 50/50 Tickets",
+    raffle: "Golf Outing 2026 - Raffle Tickets"
+  },
+
+  // Testing
+  demoMode: false,           // true shows demo controls in Settings. Or add ?demo to the URL.
+  storageKey: "eepta-golf-2026-v1"
+};
+
+const venmoUrl = (note) =>
+  `https://venmo.com/${CONFIG.venmoHandle}?txn=pay&note=${encodeURIComponent(note)}`;
+
+/* =========================================================================
+   02. ICONS (inline, so no image assets are needed)
+   ========================================================================= */
+const I = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICONS = {
+  ball: I('<circle cx="12" cy="12" r="8"/><circle cx="10" cy="9" r=".7" fill="currentColor"/><circle cx="13.5" cy="10" r=".7" fill="currentColor"/><circle cx="11" cy="13" r=".7" fill="currentColor"/><circle cx="14.5" cy="13.5" r=".7" fill="currentColor"/><circle cx="9" cy="15" r=".7" fill="currentColor"/>'),
+  tee: I('<path d="M7 4h10l-3.5 4v11l-1.5 2-1.5-2V8z"/>'),
+  flag: I('<path d="M7 21V3"/><path d="M7 4l11 3.5L7 11"/><path d="M3.5 21h8"/>'),
+  trophy: I('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3.5 4"/><path d="M16 6h3a3 3 0 0 1-3.5 4"/><path d="M12 13v4"/><path d="M8.5 20h7"/><path d="M9.5 17h5v3h-5z"/>'),
+  headphones: I('<path d="M4 16v-4a8 8 0 0 1 16 0v4"/><path d="M4 15h3.5v6H5.5A1.5 1.5 0 0 1 4 19.5z"/><path d="M20 15h-3.5v6h2a1.5 1.5 0 0 0 1.5-1.5z"/>'),
+  flower: I('<circle cx="12" cy="8" r="2"/><path d="M12 6a2.5 2.5 0 1 1 3-1.5M14 8a2.5 2.5 0 1 1 1.5 3M12 10a2.5 2.5 0 1 1-3 1.5M10 8A2.5 2.5 0 1 1 8.5 5"/><path d="M12 10v11"/><path d="M12 16c-3 0-4.5-1.8-4.5-3.2 2.6 0 4.5 1.2 4.5 3.2z"/><path d="M12 18c2.6 0 4-1.6 4-2.8-2.3 0-4 1-4 2.8z"/>'),
+  gem: I('<path d="M6.5 4h11L21 9l-9 11L3 9z"/><path d="M3 9h18"/><path d="M9.5 4 8 9l4 11 4-11-1.5-5"/>'),
+  balloon: I('<path d="M12 2.5c3.6 0 6 2.9 6 6.4 0 4-3.2 7.1-6 7.1s-6-3.1-6-7.1c0-3.5 2.4-6.4 6-6.4z"/><path d="M11 16h2l-1 1.8z"/><path d="M12 17.8c-1.8 1.4 1.8 2.3 0 4"/><path d="M9.3 6.2c.6-.9 1.5-1.4 2.4-1.5"/>'),
+  billboard: I('<path d="M3 3.5h18v11H3z"/><path d="M7.5 14.5V21M16.5 14.5V21"/><circle cx="9" cy="8.5" r="2"/><path d="M6 12.5c.6-1.6 1.7-2.2 3-2.2s2.4.6 3 2.2"/><path d="M14 7.5h4M14 10h3"/>'),
+  baseball: I('<circle cx="12" cy="12" r="8.5"/><path d="M7 5.2c2.3 3.6 2.3 10 0 13.6"/><path d="M17 5.2c-2.3 3.6-2.3 10 0 13.6"/><path d="M8.8 8l-1.2.4M9.3 11l-1.3.1M9.3 13.5l-1.3-.2M8.8 16l-1.2-.5M15.2 8l1.2.4M14.7 11l1.3.1M14.7 13.5l1.3-.2M15.2 16l1.2-.5"/>'),
+  sun: I('<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/>'),
+  cake: I('<path d="M4 21h16v-8H4z"/><path d="M4 16.5c1.4 1 2.8 1 4 0s2.6-1 4 0 2.6 1 4 0 2.6-1 4 0"/><path d="M12 9v4"/><path d="M12 5.5c.9.8.9 2 0 2.5-.9-.5-.9-1.7 0-2.5z"/>'),
+  megaphone: I('<path d="M3 10v4h3l9 5V5L6 10z"/><path d="M18 9.5a3.5 3.5 0 0 1 0 5"/><path d="M6 14l1.5 5.5H10L9 14"/>'),
+  sign: I('<path d="M12 21V3"/><path d="M5 5h12l2 2-2 2H5z"/><path d="M19 11H7l-2 2 2 2h12z"/><path d="M9 21h6"/>'),
+  medal: I('<path d="M8 2.5 12 9l4-6.5"/><path d="M6 2.5h4M14 2.5h4"/><circle cx="12" cy="15" r="5.5"/><path d="M12 12.5l.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3z"/>'),
+  grill: I('<path d="M4 10h16a8 8 0 0 1-16 0z"/><path d="M3 10h18"/><path d="M8.5 17.5 6.5 22M15.5 17.5l2 4.5M12 18v4"/><path d="M9 2.5c-1 1.4 1 2.3 0 4M13 2.5c-1 1.4 1 2.3 0 4M17 3.5c-.8 1 .8 1.8 0 3"/>'),
+  shaker: I('<path d="M8 9h8v11a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 8 20z"/><path d="M8.5 9 9.5 5h5l1 4"/><path d="M9.5 3h5v2h-5z"/><path d="M10.5 13.5h3M10.5 16h3"/>'),
+  headgear: I('<path d="M5 12a7 7 0 0 1 14 0"/><circle cx="6" cy="14.5" r="3"/><circle cx="18" cy="14.5" r="3"/><path d="M6 17.5c1.5 3 10.5 3 12 0"/><path d="M12 5v14.5"/><path d="M8.5 7.5 12 10l3.5-2.5"/>'),
+  star: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>',
+  key: I('<circle cx="8" cy="12" r="4"/><path d="M12 12h9"/><path d="M18 12v3M21 12v2"/>'),
+  club: I('<path d="M5 3l11 14"/><path d="M16 17l4-1.2.8 2.2-5 2z"/>'),
+  ticket: I('<path d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/><path d="M14 7v10" stroke-dasharray="1.5 2"/>'),
+  putter: I('<path d="M14 3 11 17"/><path d="M8 17h6.5v2.5H6.5z"/><circle cx="18.5" cy="19" r="1.5"/>'),
+  map: I('<path d="M3 6l6-2.5 6 2.5 6-2.5v14.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 3.5v14.5M15 6v14.5"/>'),
+  sparkle: I('<path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z"/>'),
+  bagtag: I('<rect x="6" y="7" width="12" height="13" rx="2"/><path d="M10 4h4v3h-4z"/><path d="M9 12h6M9 15h4"/>'),
+  flip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+};
+
+/* =========================================================================
+   03. SPONSOR DATA — ONE array. The deck is generated from this.
+   -------------------------------------------------------------------------
+   cardType:       "guess" (identity hidden) | "meet" (identity first)
+   frontTreatment: "type" | "number" | "bagtag" | "vintage" | "blue" | "kelly" | "navy" | "object" | "photo"
+   reveal:         "flip" | "tumble" | "slide"
+   span:           1 or 2 columns (auto-widened on desktop so rows stay full)
+   size:           headline size "md" | "lg" | "xl"
+   logo / image:   ASSET PLACEHOLDERS. Add art later with one line, e.g. logo: "assets/grant-street.svg"
+                   (sponsor logos → logo; sponsor, family, trophy, balloon photos → image)
+   needsApproval:  researched fact. Confirm with the sponsor before event day.
+   sponsorshipLevel: shown on the REVEAL side only, next to the sponsor's identity
+   featured / priority: featured sponsors get gold detailing, a wider card and early placement.
+                   FEED uses "featured:1" / "featured:2" / "featured:3" slots, resolved by priority.
+   ========================================================================= */
+const sponsors = [
+  { id:"grant-street", name:"Grant Street Cafe", sponsorshipLevel:"Featured Partner", featured:true, priority:2, cardType:"guess", frontTreatment:"number", reveal:"flip", span:2,
+    frontBig:"8.2", frontHeadline:"Which sponsor earned this from Dave Portnoy?", size:"md",
+    backHeadline:"Grant Street Cafe", backSub:"Dumont",
+    backCopy:"Dave Portnoy stopped by the Dumont favorite and gave its thin-crust bar pie an 8.2. His words: “a confident 8.2.”",
+    kicker:"Around here, that’s pizza royalty.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"rubhouse", name:"RubHouse Rebel Seasonings", sponsorshipLevel:"The 19th Hole Cookout Sponsor", featured:true, priority:1,
+    cardType:"guess", frontTreatment:"tailgate", reveal:"flip", span:2,
+    frontHeadline:"HE FORGOT THE SEASONINGS.", frontSubhead:"So naturally, he started a seasoning company.", size:"lg", icons:["grill","shaker"], hint:"Flip it →",
+    backHeadline:"RUBHOUSE REBEL",
+    backCopy:"It started at a Penn State tailgate with borrowed spices, an improvised blend and a splash of Jameson.",
+    // NOTE: "Misspeled" is intentional. Do not correct it.
+    brandLine:"Do it your way. Misspeled and unmatched.",
+    logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"ellis", name:"Ellis Family", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"type", reveal:"flip", span:1,
+    frontHeadline:"BLAME THIS GUY.", size:"xl",
+    backHeadline:"O’Neil Ellis", backSub:"The Ellis Family",
+    backCopy:"One of the reasons this outing started four years ago. Wondering whose bright idea it was to have you golfing today?",
+    kicker:"Hats off to O’Neil.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"silent-disco", name:"Exit 165 Silent Disco", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"object", reveal:"slide", span:2,
+    frontHeadline:"WHAT EXACTLY IS A SILENT DISCO?", size:"lg", icon:"headphones",
+    backHeadline:"Exit 165 Silent Disco",
+    backCopy:"Everyone gets wireless headphones with the music right in their ears. Take yours off and you’re watching grown adults enthusiastically dance to silence.",
+    kicker:"Watching is half the fun.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"talia", name:"Starr Therapy / Talia Filippelli", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"blue", reveal:"flip", span:2,
+    frontHeadline:"THIS SPONSOR CAN ACTUALLY TELL YOU HOW TO GET TO SESAME STREET.", size:"lg", icon:"sign",
+    backHeadline:"Talia Filippelli", backSub:"Starr Therapy",
+    // needsApproval: Sesame credential. Public sources: advisor to Sesame Workshop since 2020. Edit the last clause if needed.
+    backCopy:"Emerson mom to a 7th grader and a 4th grader, wife of everyone’s favorite billboard Realtor Mike Filippelli, founder of Starr Therapy, and an advisor to Sesame Workshop, the folks behind Sesame Street.",
+    kicker:"Yes. Really.", needsApproval:true, logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"avo", name:"Avo’s Elegant Jewelry", sponsorshipLevel:"Fore the Ladies Women’s Golf Clinic Sponsor", featured:true, priority:3,
+    cardType:"meet", frontTreatment:"jewel", reveal:"tumble", span:2,
+    frontHeadline:"Avo’s Elegant Jewelry", frontSubhead:"Handle with care.", size:"lg", icon:"gem", ribbon:"Official Sponsor of our First-Ever Fore the Ladies Women’s Golf Clinic", sparkle:true,
+    backHeadline:"A little extra sparkle on the course. ✨",
+    backCopy:"Avo stepped up as official sponsor of our first-ever Fore the Ladies Women’s Golf Clinic.",
+    kicker:"A true diamond in the rough.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"rice", name:"Rice Family", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"number", reveal:"flip", span:1,
+    frontBig:"5", frontHeadline:"FIVE.", frontSubhead:"One golfer is about to become a father of five.", size:"md",
+    backHeadline:"Ricky Rice", backSub:"The Rice Family",
+    backCopy:"Show Ricky a particularly good time today as he swings into his newest role: father of FIVE.",
+    kicker:"Suddenly 18 holes sounds relaxing.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"carter", name:"Carter Electric", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"bagtag", reveal:"slide", span:1,
+    frontHeadline:"Carter Electric", frontSubhead:"More than a name on a sign.", size:"md",
+    backHeadline:"Wired in.", backSub:"Carter Electric",
+    // needsApproval: company fact (2nd sentence). Public listing: Carter Electric LLC, Emerson, small + locally owned.
+    backCopy:"A major advocate for this event as both a sponsor and a player. Small, locally owned, and based right here in Emerson.",
+    needsApproval:true, logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"mvf", name:"MVF Homes / Michael Filippelli", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"object", reveal:"slide", span:1,
+    frontHeadline:"Possibly the most famous billboard face in Emerson.", size:"md", icon:"billboard",
+    backHeadline:"Mike Filippelli", backSub:"MVF Homes",
+    backCopy:"Off the billboard and on the course today, showing off another area of expertise:",
+    kicker:"WORK HARD. PLAY HARDER.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"miller", name:"Miller Creations Co.", sponsorshipLevel:"Bragging Rights Trophy Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"vintage", reveal:"flip", span:2,
+    frontHeadline:"His name is on your swag AND your trophy.", frontSubhead:"Who is it?", size:"lg", icon:"trophy",
+    backHeadline:"Tom Miller", backSub:"Miller Creations Co.",
+    // ASSET PLACEHOLDER: trophy photo → image: "assets/trophy.jpg"
+    backCopy:"Tom understood the assignment. He’s golfing today, made custom items for your swag bag AND created this year’s trophies.",
+    kicker:"Try not to celebrate directly in his face.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"little-league", name:"Emerson Little League Baseball", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"object", reveal:"tumble", span:1,
+    frontHeadline:"Emerson Little League", frontSubhead:"Different kind of diamond.", size:"md", icon:"baseball",
+    backHeadline:"Batter up.", backSub:"Emerson Little League",
+    // needsApproval: live-streaming fact (announced 2021). Confirm it's still running.
+    backCopy:"Games at Benkovic and Hillman Fields stream live and free, so grandparents never have to miss an at-bat.",
+    needsApproval:true, logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"cousins", name:"Cousins Realty", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"type", reveal:"flip", span:1,
+    frontHeadline:"He’s a good Cousin.", frontSubhead:"Literally.", size:"lg",
+    backHeadline:"Anthony Khiami", backSub:"Cousins Realty",
+    backCopy:"Also married to PTA Board Member Danielle Khiami, who’s spent six years helping make things like this happen.",
+    kicker:"So sponsoring may have been the easier option.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"glow", name:"Glow Commando", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"type", reveal:"slide", span:2,
+    frontHeadline:"Summer’s ending. Your tan doesn’t have to.", size:"lg", icon:"sun", blush:true,
+    backHeadline:"Glow Commando",
+    backCopy:"Before you slide into your Halloween-ghost complexion: your wives will be very happy to know there’s an at-home tanning mousse involved.",
+    kicker:"Find Jess Timmerman for details.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"stutzel", name:"The Stutzel Family / Kate Stutzel", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"number", reveal:"tumble", span:1,
+    frontBig:"4/4", frontHeadline:"FOUR FOR FOUR.", frontSubhead:"Which family has sponsored every single year?", size:"md",
+    backHeadline:"The Stutzel Family",
+    backCopy:"Four years. Four sponsorships. Here since year one.",
+    kicker:"At this point, they’re tradition.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"sweeney", name:"Happy Birthday Dan Sweeney", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"kelly", reveal:"slide", span:2,
+    frontHeadline:"TOMORROW IS THIS GUY’S BIRTHDAY.", frontSubhead:"Today we embarrass him.", size:"lg", icon:"cake",
+    backHeadline:"HAPPY BIRTHDAY, DAN SWEENEY. 🎂",
+    backCopy:"It may technically be tomorrow, but we’re not letting a minor detail stop us.",
+    kicker:"See Dan? Wish him a Happy Birthday.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"balloons", name:"Balloons by CC", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"object", reveal:"flip", span:1,
+    frontHeadline:"Balloons by CC", frontSubhead:"Not your average balloon arch.", size:"md", icon:"balloon",
+    // ASSET PLACEHOLDER: balloon installation photo → image: "assets/balloons-by-cc.jpg"
+    backHeadline:"Elevated.", backSub:"Balloons by CC",
+    backCopy:"Next-level balloon installations and unmatched creativity. Your next party’s showstopper is on the course today.",
+    logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"realty-one", name:"Realty One / Anthony Khiami", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"number", reveal:"flip", span:1,
+    frontBig:"20", frontHeadline:"YEARS?!", frontSubhead:"Which golfer has been a Realtor for two decades?", size:"md",
+    backHeadline:"Anthony Khiami", backSub:"Realty One",
+    backCopy:"Yep. You’ve heard of Cousins Realty, but we bet you didn’t know Anthony has been a Realtor for about 20 years.",
+    kicker:"Two decades. Zero mulligans.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"wrestling", name:"Emerson Park Ridge Wrestling", sponsorshipLevel:"Hole Sponsor",
+    cardType:"meet", frontTreatment:"mat", reveal:"tumble", span:2, offline:true,
+    frontHeadline:"WE KNOW SOMETHING YOU DON’T.", frontSubhead:"There’s a new tournament name coming to Emerson Wrestling this year.", frontSub2:"Want to know what it is?", size:"lg", icon:"headgear",
+    backHeadline:"Emerson Park Ridge Wrestling",
+    backCopy:"We’re not telling you here. Want the new tournament name?",
+    kicker:"FIND A WRESTLING COACH AT TODAY’S OUTING.",
+    backCopy2:"Hint: there’s more than one here.",
+    backFine:"Ask nicely. Maybe they’ll tell you.",
+    logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"rockhouse", name:"Rock House Digital / Casey Donnellon", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"vintage", reveal:"slide", span:1,
+    frontHeadline:"One Emerson guy decided to build his own agency.", frontSubhead:"Who?", size:"md", icon:"megaphone",
+    backHeadline:"Casey Donnellon", backSub:"Rock House Digital",
+    // needsApproval: launch year (company site says October 2023).
+    backCopy:"After years in digital marketing, Casey launched Rock House Digital in 2023. Now he helps businesses with branding, websites, paid media and social.",
+    needsApproval:true, logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"ron", name:"Ron Gerhold Jr., PGA", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"guess", frontTreatment:"blue", reveal:"flip", span:1,
+    frontHeadline:"NEED SWING ADVICE?", frontSubhead:"We know a guy.", size:"lg", icon:"club",
+    backHeadline:"Ron Gerhold Jr., PGA",
+    backCopy:"Today’s resident golf pro, and one of the people who’s consistently helped make planning this event a",
+    kicker:"HOLE IN ONE.", backCopy2:"Swing falls apart today? You know who to find.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"softball", name:"Emerson Softball", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"bagtag", reveal:"tumble", span:1,
+    frontHeadline:"Emerson Softball", frontSubhead:"Golf isn’t the only game in town.", size:"md",
+    backHeadline:"Girls got game.", backSub:"Emerson Softball",
+    // needsApproval: county titles (2015, 2019) per the league site.
+    backCopy:"A volunteer-run program for Emerson girls in grades 1–8, with Bergen County championships in 2015 and 2019.",
+    needsApproval:true, logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"timmerman", name:"Timmerman Family", sponsorshipLevel:"Hole Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"photo", reveal:"flip", span:2,
+    // ASSET PLACEHOLDER: family photo → image: "assets/timmerman.jpg" (replaces the empty frames)
+    frontHeadline:"The Timmerman family photo.", frontSubhead:"Yes, it’s missing. There’s a reason.", size:"md",
+    backHeadline:"We have a good excuse.", backSub:"The Timmerman Family",
+    backCopy:"Getting the entire Timmerman family in one place for a photo has proven statistically impossible.",
+    kicker:"Busy is kind of their brand.", logo:"", image:"", url:"", creditValue:1 },
+
+  { id:"new-city", name:"New City Florist", sponsorshipLevel:"Special Someone Sponsor", featured:false, priority:null, cardType:"meet", frontTreatment:"vintage", reveal:"tumble", span:2,
+    frontHeadline:"FREE RELATIONSHIP ADVICE:", frontSubhead:"Don’t go home empty-handed.", size:"lg", icon:"flower",
+    backHeadline:"New City Florist",
+    backCopy:"Before you leave, grab a little something for your Special Someone. Especially if they picked up the slack while you spent the day on the greens.",
+    kicker:"Consider it relationship insurance.", logo:"", image:"", url:"", creditValue:1 }
+];
+
+/* Wild Cards: not sponsors; they don't count toward Secrets Uncovered. */
+const wildCards = [
+  { id:"w-donotflip", frontTreatment:"kelly", reveal:"tumble", span:2, frontHeadline:"DO NOT FLIP", frontSubhead:"Seriously.", size:"xl",
+    backHeadline:"You flipped it.", backCopy:"Of course you did. Rule-breaker bonus, on the house.", credits:1 },
+  { id:"w-lucky", frontTreatment:"gold", reveal:"flip", span:1, frontHeadline:"LUCKY YOU", frontSubhead:"Maybe.", size:"lg", icon:"sparkle",
+    backHeadline:"Actually lucky.", backCopy:"+1 Clubhouse Credit. Unlike your last tee shot, this one found the fairway.", credits:1 },
+  { id:"w-bored", frontTreatment:"navy", reveal:"slide", span:2, frontHeadline:"YOU LOOK BORED.", frontSubhead:"We can fix that.", size:"xl",
+    backHeadline:"Tiny challenge.", backCopy:"Tell your foursome about the worst shot you’ve ever hit. Out loud. Right now. We’ll wait.", credits:0 },
+  { id:"w-free", frontTreatment:"navy", reveal:"flip", span:1, frontHeadline:"FREE CREDIT?", frontSubhead:"Tap to claim.", size:"lg",
+    backHeadline:"Nope.", backCopy:"Nothing in golf is free. Except advice nobody asked for.", credits:0 },
+  { id:"w-19th", frontTreatment:"blue", reveal:"tumble", span:1, frontHeadline:"19TH HOLE", frontSubhead:"???", size:"lg", icon:"flag",
+    backHeadline:"Why did the golfer bring two pairs of pants?", backCopy:"In case he got a hole in one.", credits:0 }
+];
+
+/* =========================================================================
+   04. GAME CONTENT
+   ========================================================================= */
+const WYR = [
+  { a:"Drive it 300 yards straight every time", b:"Never three-putt again",
+    ra:"Bold. You’ll still be the last one off the green.", rb:"The wise choice. Drive for show, putt for dough." },
+  { a:"Your wife sees your real scorecard", b:"Your kids see your swing in slow motion",
+    ra:"Brave. Hope there’s a good explanation for hole 7.", rb:"It will become a meme. It will hit the family group chat." },
+  { a:"Free Grant Street pizza for a year", b:"A guaranteed parking spot at the Emerson train station",
+    ra:"8.2 all year long. Correct answer.", rb:"Commuters are nodding very seriously right now." },
+  { a:"Coach one more travel season", b:"Assemble one more piece of flat-pack furniture",
+    ra:"You’ll be back. You always come back.", rb:"There’s always one extra screw. Nobody knows where it goes." },
+  { a:"A hole in one with nobody watching", b:"Your best round ever with the whole outing watching",
+    ra:"If a tree falls in the forest, does it make a birdie?", rb:"Pics or it didn’t happen, and you want the pics." }
+];
+
+const SHOTS = [
+  { dist:"125 YARDS.", q:"Slight wind. What’s in your hand?", opts:["PW","9","8","7"],
+    r:["Confident. Or delusional. We respect it either way.","The textbook answer. Your high school coach would be proud.","Smart. Nobody’s ever been short and happy.","A knockdown shot, huh? Sure. Let’s call it that."] },
+  { dist:"20 FEET.", q:"Greenside bunker. Your foursome is watching.", opts:["Sand wedge","Lob wedge","Putter","Pick it up"],
+    r:["Open the face, trust it. Or at least look like you are.","Flop shot from sand. You’ve been watching YouTube again.","The Texas Wedge from a bunker. Unconventional. Legal. Very dad.","Honesty. Your scorecard thanks you."] },
+  { dist:"6 FEET.", q:"Downhill. For the hole. Now what?", opts:["Charge it","Die it in","Ask for a gimme","Fake a phone call"],
+    r:["You’re coming back uphill for this one, aren’t you.","Soft hands. Somebody’s been practicing.","From six feet? Bold ask. Try it anyway.","Classic. Nobody believes it. Everyone respects it."] }
+];
+
+const TRIVIA = [
+  { q:"Who hit the first golf shots on the moon, in 1971?", a:["Neil Armstrong","Buzz Aldrin","Alan Shepard","John Glenn"], c:2,
+    why:"Alan Shepard, Apollo 14, with a makeshift six-iron. Still better contact than most of us." },
+  { q:"How many clubs are you allowed to carry in your bag?", a:["12","14","16","As many as fit"], c:1,
+    why:"Fourteen. The fifteenth one in your garage doesn’t count, but it knows what it did." },
+  { q:"Tiger Woods’s actual first name is…", a:["Eldrick","Earl","Edward","Tiger. Obviously."], c:0,
+    why:"Eldrick. “Tiger” was a nickname from his dad." }
+];
+
+const TOT = [
+  { a:"Cart", b:"Walk", qa:"The cart is basically a lounge with wheels.", qb:"Ten thousand steps and a sense of superiority." },
+  { a:"Morning tee", b:"Afternoon tee", qa:"Dew on the greens, coffee in the cupholder.", qb:"You like a round that ends near dinner. And a drink." },
+  { a:"Beer", b:"Bloody Mary", qa:"Simple. Cold. Undefeated.", qb:"Technically a salad." },
+  { a:"Music in the cart", b:"Absolutely not", qa:"You’re the DJ. No ballads on the back nine.", qb:"Purist. You hear the birds. And every bad shot." },
+  { a:"Driver", b:"Putter", qa:"You’re here for the long ball.", qb:"The quiet assassin." },
+  { a:"Mulligan", b:"Play it where it lies", qa:"It’s a charity outing. Mulligans are basically donations.", qb:"Rules guy. Every foursome has one." }
+];
+
+/* Physical challenges.
+   VERIFICATION: honor system on event day (PTA decision). Integration hooks live in section 11. */
+const CHALLENGES = {
+  fiftyFifty:{ required:true, tag:"Needed for your ticket", icon:"ticket", title:"WANT 3 EASY CREDITS?", copy:"Grab your 50/50 tickets. Somebody’s winning half the pot. Might as well be you.",
+    venmo:"fiftyFifty", cta:"Buy 50/50 on Venmo", done:"I got my 50/50 tickets", credits:()=>CONFIG.fiftyFiftyCredits, label:"Bought 50/50 tickets" },
+  raffle:{ required:true, tag:"Needed for your ticket", icon:"trophy", title:"The raffle is stacked.", copy:"More tickets, better odds. That’s just math.",
+    venmo:"raffle", cta:"Buy raffle tickets on Venmo", done:"I got my raffle tickets", credits:()=>CONFIG.rafflePurchaseCredits, label:"Bought raffle tickets" },
+  putting:{ required:false, tag:"Bonus", icon:"putter", title:"Putting competition.", copy:"Take your shot on the practice green. Sinking it is optional. Showing up isn’t.",
+    done:"I took my shot", credits:()=>CONFIG.puttingCredits, label:"Putting competition" },
+  scavenger:{ required:false, tag:"Bonus · On-course challenge", icon:"map", title:"Think you’ve been paying attention?", copy:"The sponsor signs out on the course hold the answers. Turn in your card for the biggest credit haul of the day.",
+    done:"I turned in my card", credits:()=>CONFIG.scavengerHuntCredits, label:"On-course scavenger hunt" }
+};
+
+/* Hidden objects. Slots are marked with data-egg-slot in the markup and generated sections. */
+const EGGS = [
+  { slot:"1", icon:"ball",   msg:"Nice find.", reward:true },
+  { slot:"2", icon:"tee",    msg:"Okay, that was easy.", reward:true },
+  { slot:"3", icon:"key",    msg:"The clubhouse key. Well, a clubhouse key.", reward:true },
+  { slot:"4", icon:"bagtag", msg:"Nice find. That’s it. That’s the prize.", reward:false },
+  { slot:"5", icon:"trophy", msg:"Tiny trophy. Huge achievement.", reward:true },
+  { slot:"6", icon:"ball",   msg:"All the way down here? Respect.", reward:true }
+];
+
+/* =========================================================================
+   05. FEED — the scroll rhythm. Reorder freely.
+   ========================================================================= */
+const FEED = [
+  { type:"cards", items:["featured:1","ellis","rice","featured:2"] },
+  { type:"wyr" },
+  { type:"cards", items:["featured:3","talia","w-donotflip"] },
+  { type:"cards", items:["carter","mvf","miller","silent-disco"] },
+  { type:"shot" },
+  { type:"cards", items:["little-league","cousins","glow","w-lucky","stutzel"] },
+  { type:"swag" },
+  { type:"cards", items:["sweeney","balloons","realty-one"] },
+  { type:"challenges", ids:["fiftyFifty"] },
+  { type:"cards", items:["wrestling","rockhouse","w-bored"] },
+  { type:"trivia" },
+  { type:"challenges", ids:["raffle"] },
+  { type:"cards", items:["ron","softball","timmerman"] },
+  { type:"tot" },
+  { type:"challenges", ids:["putting","scavenger"] },
+  { type:"cards", items:["new-city","w-free","w-19th"] },
+  { type:"key" }
+];
+
+/* =========================================================================
+   06. STATE (localStorage, per device. No accounts, no leaderboard.)
+   ========================================================================= */
+const blankState = () => ({ v:2, awards:{}, discovered:{}, wild:{}, challenges:{}, swag:{}, eggs:{}, tot:{}, trivia:{}, raffleTicketUnlocked:false, raffleTicketClaimed:false, ticket:{ code:null, unlockedAt:null, claimedAt:null } });
+let state = blankState();
+let storageOK = true;
+function load(){
+  try{
+    const raw = localStorage.getItem(CONFIG.storageKey);
+    if(raw){ state = Object.assign(blankState(), JSON.parse(raw)); }
+    localStorage.setItem(CONFIG.storageKey+'-probe','1'); localStorage.removeItem(CONFIG.storageKey+'-probe');
+  }catch(e){ storageOK = false; }
+}
+function save(){
+  try{ localStorage.setItem(CONFIG.storageKey, JSON.stringify(state)); }catch(e){ storageOK = false; }
+}
+const credits = () => Object.values(state.awards).reduce((s,a)=>s+(a.c||0),0);
+const secretsFound = () => sponsors.filter(s=>state.discovered[s.id]).length;
+const eggsFound = () => Object.keys(state.eggs).length;
+const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+/* award(): the ONLY place credits are granted. Keys are unique, so nothing ever pays twice. */
+function award(key, amount, label, originEl, toastMsg){
+  if(state.awards[key]) return false;
+  state.awards[key] = { c:amount, l:label, t:Date.now() };
+  save();
+  if(amount > 0) flyToken(originEl);
+  toast(toastMsg || (amount>0 ? `<b>+${amount} ♣</b> ${label}` : label));
+  updateAll();
+  return true;
+}
+
+/* =========================================================================
+   07. UNLOCK LOGIC
+   ========================================================================= */
+function keyStatus(){
+  const u = CONFIG.unlock;
+  const found = secretsFound(), total = sponsors.length;
+  const fifty = !!state.challenges.fiftyFifty, raffle = !!state.challenges.raffle;
+  const cr = credits();
+  const cardsLeft = u.requireAllSponsors ? total - found : 0;
+  const creditsLeft = Math.max(0, (u.minCredits||0) - cr);
+  const needFifty = u.requireFiftyFifty && !fifty;
+  const needRaffle = u.requireRaffle && !raffle;
+  const itemsLeft = cardsLeft + (needFifty?1:0) + (needRaffle?1:0) + (creditsLeft>0?1:0);
+  return { found, total, fifty, raffle, cr, cardsLeft, creditsLeft, needFifty, needRaffle, itemsLeft, met: itemsLeft===0 };
+}
+function remainingText(k){
+  const parts = [];
+  if(k.cardsLeft) parts.push(`${k.cardsLeft} card${k.cardsLeft>1?'s':''}`);
+  if(k.needFifty) parts.push('50/50 tickets');
+  if(k.needRaffle) parts.push('raffle tickets');
+  if(k.creditsLeft) parts.push(`${k.creditsLeft} more credit${k.creditsLeft>1?'s':''}`);
+  if(parts.length<=1) return parts.join('');
+  return parts.slice(0,-1).join(', ') + ' + ' + parts[parts.length-1];
+}
+function keyHeadline(k){
+  if(state.raffleTicketClaimed) return "Door Prize Ticket ✓";
+  if(k.met) return "YOU UNLOCKED IT.";
+  if(k.itemsLeft===1) return "ONE. MORE.";
+  if(k.itemsLeft<=3) return "So close it’s awkward.";
+  if(k.found===0 && !k.fifty && !k.raffle) return "You’re just getting started.";
+  return "Keep going.";
+}
+function deckCopy(n, total){
+  const left = total - n;
+  if(n===0) return "You’re just getting started.";
+  if(n===total) return "YOU FLIPPED THE WHOLE DECK. Respect.";
+  if(left===1) return "ONE. MORE. Don’t leave it sitting there.";
+  if(left<=3) return `${left} left. At this point, quitting would be weird.`;
+  if(left<=7) return `${left} secrets left. Don’t be that guy.`;
+  if(n>=10) return "Now you’re making the rounds.";
+  if(n>=5) return "Okay. You’re getting the hang of this.";
+  return "You’ve barely met anyone.";
+}
+
+/* =========================================================================
+   08. RENDERING
+   ========================================================================= */
+const byId = {};
+sponsors.forEach(s=>{ byId[s.id] = Object.assign({kind:"sponsor"}, s); });
+wildCards.forEach(w=>{ byId[w.id] = Object.assign({kind:"wild", cardType:"wild", name:w.frontHeadline}, w); });
+
+let cardNo = 0;
+const TYPE_TAG = { guess:"Guess who?", meet:"Meet the sponsor", wild:"Wild card" };
+const TYPE_SHORT = { guess:"Guess", meet:"Meet", wild:"Wild" };
+
+function frontArt(c){
+  if(c.frontTreatment==="photo"){
+    if(c.image) return `<img class="photo-real" src="${c.image}" alt="${c.name}">`;
+    return `<div class="polaroids" aria-hidden="true"><span class="polaroid"><span>?</span></span><span class="polaroid"><span>?</span></span><span class="polaroid"><span>?</span></span></div>`;
+  }
+  if(c.image) return `<img class="photo-real" src="${c.image}" alt="">`;
+  if(c.icons) return `<div class="art">${c.icons.map(k=>ICONS[k]).join('')}</div>`;
+  if(c.icon && c.frontTreatment!=="bagtag") return `<div class="art">${ICONS[c.icon]}</div>`;
+  return '';
+}
+
+function levelTag(c){
+  return `<span class="level ${c.featured?'feat':''}">${c.featured ? ICONS.star : ICONS.tee}${c.sponsorshipLevel}</span>`;
+}
+function renderCard(c){
+  cardNo++;
+  const no = String(cardNo).padStart(2,'0');
+  const isWild = c.kind==="wild";
+  const wrap = document.createElement('div');
+  wrap.className = `card-wrap span-${c.span||1}` + (c.featured ? ' featured' : '');
+  wrap.dataset.span = c.span||1;
+  const treat = c.blush ? 'blush' : c.frontTreatment;
+  const sparkles = c.sparkle ? `<span class="sparkle s1" style="top:16%;right:10%;width:18px;height:18px">${ICONS.sparkle}</span><span class="sparkle s2" style="top:38%;right:24%;width:11px;height:11px">${ICONS.sparkle}</span><span class="sparkle s3" style="bottom:24%;right:9%;width:14px;height:14px">${ICONS.sparkle}</span>` : '';
+  const stampText = isWild ? (c.credits ? `+${c.credits} credit` : 'Flipped') : 'Discovered';
+
+  wrap.innerHTML = `
+    <div class="card rv-${c.reveal}" role="button" tabindex="0" aria-expanded="false" data-id="${c.id}">
+      <div class="card-inner">
+        <div class="face face-front t-${treat}">
+          ${sparkles}
+          <div class="face-top"><span class="no">No. ${no}</span><span class="type-tag" data-long="${TYPE_TAG[c.cardType]}" data-short="${TYPE_SHORT[c.cardType]}">${TYPE_TAG[c.cardType]}</span></div>
+          ${c.featured && !c.ribbon ? `<span class="feat-chip">${ICONS.star} Featured partner</span>`:''}
+          ${c.ribbon ? `<span class="ribbon">${c.ribbon}</span>`:''}
+          ${frontArt(c)}
+          <div class="face-body">
+            ${c.frontBig ? `<p class="big" aria-hidden="true">${c.frontBig}</p>`:''}
+            <p class="hl ${c.size||'md'}">${c.frontHeadline}</p>
+            ${c.frontSubhead ? `<p class="sub">${c.frontSubhead}</p>`:''}
+            ${c.frontSub2 ? `<p class="sub2">${c.frontSub2}</p>`:''}
+          </div>
+          <div class="face-foot"><span class="flip-hint">${ICONS.flip} ${c.hint||'Flip it'}</span><span class="found">✓ ${isWild?'Flipped':'Discovered'}</span></div>
+        </div>
+        <div class="face face-back ${isWild?'b-wild':''}" aria-hidden="true">
+          <div class="face-top"><span class="no">No. ${no} · ${isWild?'Wild card':'Revealed'}</span></div>
+          ${c.offline ? `<span class="offline">${ICONS.flag} Offline secret · Your next clue is on the course</span>`:''}
+          ${c.logo ? `<img class="logo" src="${c.logo}" alt="${c.name} logo">`:''}
+          <p class="back-hl">${c.backHeadline}</p>
+          ${c.backSub ? `<p class="back-sub">${c.backSub}</p>`:''}
+          ${c.sponsorshipLevel && !c.brandLine ? levelTag(c) : ''}
+          <p class="back-copy">${c.backCopy}</p>
+          ${c.brandLine ? `<p class="brand-line">${c.brandLine}</p>`:''}
+          ${c.kicker ? `<p class="kicker-big">${c.kicker}</p>`:''}
+          ${c.backCopy2 ? `<p class="back-copy">${c.backCopy2}</p>`:''}
+          ${c.backFine ? `<p class="back-fine">${c.backFine}</p>`:''}
+          ${c.sponsorshipLevel && c.brandLine ? levelTag(c) : ''}
+          <span class="stamp">${ICONS.check} ${stampText}</span>
+        </div>
+      </div>
+    </div>
+    ${c.url ? `<a class="card-link" href="${c.url}" target="_blank" rel="noopener">Visit ${c.name} ↗</a>`:''}`;
+  const card = $('.card', wrap);
+  const done = isWild ? state.wild[c.id] : state.discovered[c.id];
+  if(done) card.classList.add('is-found');
+  card.addEventListener('click', ()=>flip(card, c));
+  card.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); flip(card,c);} });
+  return wrap;
+}
+
+function flip(card, c){
+  const open = !card.classList.contains('is-open');
+  card.classList.toggle('is-open', open);
+  card.setAttribute('aria-expanded', String(open));
+  $('.face-front', card).setAttribute('aria-hidden', String(open));
+  $('.face-back', card).setAttribute('aria-hidden', String(!open));
+  if(!open) return;
+  const isWild = c.kind==="wild";
+  if(isWild ? state.wild[c.id] : state.discovered[c.id]) return;
+  // First reveal: record it, then award once the flip lands.
+  if(isWild) state.wild[c.id] = true; else state.discovered[c.id] = true;
+  save();
+  setTimeout(()=>{
+    card.classList.add('is-found','just-found');
+    if(isWild){
+      if(c.credits) award(`w:${c.id}`, c.credits, `Wild card: ${c.frontHeadline}`, card);
+      else updateAll();
+    }else{
+      { const amt=(c.creditValue||1)*CONFIG.sponsorDiscoveryCredits; award(`s:${c.id}`, amt, `Discovered: ${c.name}`, card, `<b>+${amt} ♣</b> ${c.name}`); }
+      if(secretsFound()===sponsors.length){
+        setTimeout(()=>award('deck-bonus', CONFIG.allSponsorsBonus, 'Flipped the whole deck', card, `<b>+${CONFIG.allSponsorsBonus} ♣</b> YOU FLIPPED THE WHOLE DECK. Respect.`), 1500);
+      }
+    }
+  }, reduced()?60:480);
+}
+
+// "featured:N" in FEED resolves to the sponsor whose priority is N (placement stays data-driven).
+function resolveId(id){
+  const m = /^featured:(\d+)$/.exec(id);
+  if(!m) return id;
+  const s = sponsors.find(x=>x.featured && x.priority===+m[1]);
+  return s ? s.id : null;
+}
+function renderCardGroup(ids){
+  const grid = document.createElement('div');
+  grid.className = 'deck-grid';
+  ids.map(resolveId).forEach(id=>{ if(id && byId[id]) grid.appendChild(renderCard(byId[id])); });
+  return grid;
+}
+
+/* ---- Would You Rather (score slip) ---- */
+function renderWYR(){
+  const s = document.createElement('section'); s.className='inter'; s.setAttribute('aria-labelledby','wyr-t');
+  s.innerHTML = `<div class="slip">
+    <p class="caps" style="margin:0">Score slip · no pencils required</p>
+    <h2 id="wyr-t">WOULD YOU RATHER?</h2>
+    <div class="wyr-opts"><button type="button" class="opt" data-k="a" aria-pressed="false"></button><div class="or" aria-hidden="true">or</div><button type="button" class="opt" data-k="b" aria-pressed="false"></button></div>
+    <p class="resp" aria-live="polite"></p>
+    <div class="slip-foot"><span class="caps" style="color:var(--muted)" data-count></span><button type="button" class="linkish" data-next>Another one →</button></div>
+  </div>`;
+  let i = 0;
+  const [oa, ob] = $$('.opt', s), resp = $('.resp', s);
+  const paint = () => { const q = WYR[i]; oa.textContent=q.a; ob.textContent=q.b; oa.setAttribute('aria-pressed','false'); ob.setAttribute('aria-pressed','false'); resp.innerHTML=''; $('[data-count]',s).textContent=`${i+1} of ${WYR.length}`; };
+  [oa,ob].forEach(b=>b.addEventListener('click',()=>{
+    const q = WYR[i], k=b.dataset.k;
+    oa.setAttribute('aria-pressed', String(k==='a')); ob.setAttribute('aria-pressed', String(k==='b'));
+    resp.innerHTML = `${k==='a'?q.ra:q.rb}<small>Today’s totally unscientific verdict.</small>`;
+    award('g:wyr', CONFIG.miniGameCredits, 'Would You Rather', b);
+  }));
+  $('[data-next]',s).addEventListener('click',()=>{ i=(i+1)%WYR.length; paint(); });
+  paint();
+  return s;
+}
+
+/* ---- Call the Shot (pin flag / yardage marker) ---- */
+function renderShot(){
+  const s = document.createElement('section'); s.className='inter'; s.setAttribute('aria-labelledby','shot-t');
+  s.innerHTML = `<div class="yard">
+    <div class="pin" aria-hidden="true"><svg viewBox="0 0 46 40"><path d="M2 2 L44 12 L2 24 Z" fill="#C89A45"/></svg></div>
+    <div class="yard-body">
+      <h2 class="caps" id="shot-t">Call the shot</h2>
+      <p class="yard-dist" data-dist></p>
+      <p class="yard-q" data-q></p>
+      <div class="clubs" data-opts></div>
+      <p class="resp" aria-live="polite"></p>
+      <div class="slip-foot"><span class="egg-inline" data-egg-slot="2"></span><button type="button" class="linkish" data-next>Next shot →</button></div>
+    </div></div>`;
+  let i=0;
+  const paint=()=>{
+    const sh = SHOTS[i];
+    $('[data-dist]',s).textContent = sh.dist; $('[data-q]',s).textContent = sh.q; $('.resp',s).innerHTML='';
+    const box = $('[data-opts]',s); box.className = 'clubs' + (sh.opts.some(o=>o.length>3)?' two':'');
+    box.innerHTML = sh.opts.map((o,j)=>`<button type="button" class="clubbtn" aria-pressed="false" data-j="${j}">${o}</button>`).join('');
+    $$('.clubbtn',box).forEach(b=>b.addEventListener('click',()=>{
+      $$('.clubbtn',box).forEach(x=>x.setAttribute('aria-pressed', String(x===b)));
+      $('.resp',s).innerHTML = `${sh.r[+b.dataset.j]}<small>No wrong answers. Just questionable ones.</small>`;
+      award('g:shot', CONFIG.miniGameCredits, 'Called the shot', b);
+    }));
+  };
+  $('[data-next]',s).addEventListener('click',()=>{ i=(i+1)%SHOTS.length; paint(); });
+  paint();
+  return s;
+}
+
+/* ---- Golf Trivia (tournament ticket) ---- */
+function renderTrivia(){
+  const s = document.createElement('section'); s.className='inter'; s.setAttribute('aria-labelledby','triv-t');
+  s.innerHTML = `<div class="ticket-game">
+    <span class="notch l" aria-hidden="true"></span><span class="notch r" aria-hidden="true"></span>
+    <div class="tg-stub"><span class="caps">Admit one · Trivia</span><span class="caps" data-rew></span></div>
+    <div class="tg-body">
+      <h2 id="triv-t">One question.</h2>
+      <p class="tg-q" data-q></p>
+      <div class="answers" data-a></div>
+      <p class="resp" aria-live="polite"></p>
+      <div class="slip-foot"><span class="egg-inline" data-egg-slot="4"></span><button type="button" class="linkish" data-next>Another question →</button></div>
+    </div></div>`;
+  let i = TRIVIA.findIndex((_,j)=>state.trivia[j]===undefined); if(i<0) i=0;
+  const rew=()=>{ $('[data-rew]',s).textContent = state.awards['g:trivia'] ? '✓ Credit earned' : `Get it right: +${CONFIG.triviaCredits} ♣`; };
+  const paint=()=>{
+    const t = TRIVIA[i]; const answered = state.trivia[i];
+    rew();
+    $('[data-q]',s).textContent = t.q;
+    const box = $('[data-a]',s);
+    box.innerHTML = t.a.map((a,j)=>`<button type="button" class="ans" data-j="${j}">${a}</button>`).join('');
+    $('.resp',s).innerHTML='';
+    const lock=(pick)=>{
+      $$('.ans',box).forEach((b,j)=>{ b.disabled=true; if(j===t.c) b.classList.add('right'); else if(j===pick) b.classList.add('wrong'); });
+      $('.resp',s).innerHTML = `${pick===t.c?'Correct.':'Not quite.'} <small>${t.why}</small>`;
+    };
+    if(answered!==undefined) lock(answered);
+    $$('.ans',box).forEach(b=>b.addEventListener('click',()=>{
+      const pick=+b.dataset.j; state.trivia[i]=pick; save(); lock(pick);
+      if(pick===t.c) award('g:trivia', CONFIG.triviaCredits, 'Golf trivia', b);
+      rew();
+    }));
+  };
+  $('[data-next]',s).addEventListener('click',()=>{ i=(i+1)%TRIVIA.length; paint(); });
+  paint();
+  return s;
+}
+
+/* ---- This or That (betting slip) ---- */
+function renderToT(){
+  const s = document.createElement('section'); s.className='inter'; s.setAttribute('aria-labelledby','tot-t');
+  s.innerHTML = `<div class="betslip">
+    <div class="bs-head"><h2 id="tot-t">This or That</h2><span class="caps">Fast picks</span></div>
+    ${TOT.map((r,i)=>`<div class="bs-row" data-i="${i}">
+       <button type="button" class="pick" data-k="a" aria-pressed="false">${r.a}</button><span class="vs" aria-hidden="true">or</span><button type="button" class="pick" data-k="b" aria-pressed="false">${r.b}</button>
+       <p class="bs-quip" aria-live="polite"></p></div>`).join('')}
+    <p class="bs-total" aria-live="polite"></p>
+  </div>`;
+  const summary=()=>{
+    if(!TOT.every((_,i)=>state.tot[i])){ $('.bs-total',s).textContent=''; return; }
+    const pick=(i)=>TOT[i][state.tot[i]];
+    $('.bs-total',s).textContent = `Your cart profile: ${pick(0)}. ${pick(2)}. ${pick(5)}. Your foursome has been warned.`;
+  };
+  $$('.bs-row',s).forEach(row=>{
+    const i=+row.dataset.i;
+    const paint=()=>{ const v=state.tot[i]; $$('.pick',row).forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.k===v))); $('.bs-quip',row).textContent = v ? TOT[i]['q'+v] : ''; };
+    $$('.pick',row).forEach(b=>b.addEventListener('click',()=>{
+      state.tot[i]=b.dataset.k; save(); paint(); summary();
+      if(TOT.every((_,j)=>state.tot[j])) award('g:tot', CONFIG.thisOrThatCredits, 'This or That, all picks in', b);
+    }));
+    paint();
+  });
+  summary();
+  return s;
+}
+
+/* ---- Physical challenges (course markers) ---- */
+function renderChallenges(ids){
+  const s = document.createElement('section'); s.className='inter';
+  const box = document.createElement('div'); box.className='markers' + (ids.length>1?' two':' solo');
+  ids.forEach(id=>{
+    const c = CHALLENGES[id];
+    const m = document.createElement('div'); m.className='marker'+(c.required?' req':''); m.dataset.ch=id;
+    const note = c.venmo ? CONFIG.venmoNotes[c.venmo] : '';
+    const tag = c.required ? c.tag : `${c.tag} · +${c.credits()} ♣`;
+    m.innerHTML = `<span class="tee-marker" aria-hidden="true">${ICONS[c.icon]}</span>
+      <div>
+        <span class="tag">${tag}</span>
+        <h2>${c.title}</h2>
+        <p>${c.copy}</p>
+        <div class="actions">
+          ${c.venmo ? `<a class="btn venmo" href="${venmoUrl(note)}" target="_blank" rel="noopener">${c.cta} ↗</a>`:''}
+          <button type="button" class="btn ${c.venmo?'ghost':''}" data-honor>${c.done}</button>
+        </div>
+        ${c.venmo ? `<p class="venmo-note">Venmo <code>@${CONFIG.venmoHandle}</code> · Note: <code>${note}</code><br>Paying cash? Find a PTA volunteer.</p>`:''}
+        <p class="honor">Honor system. The PTA trusts you. Mostly.</p>
+      </div>`;
+    const btn = $('[data-honor]', m);
+    let armed = null;
+    btn.addEventListener('click',()=>{
+      if(state.challenges[id]) return;
+      if(!armed){
+        btn.classList.add('confirming'); btn.textContent='Tap again to confirm';
+        armed = setTimeout(()=>{ armed=null; btn.classList.remove('confirming'); btn.textContent=c.done; }, 4000);
+        return;
+      }
+      clearTimeout(armed); armed=null;
+      completeChallenge(id, 'honor', btn);
+    });
+    box.appendChild(m);
+  });
+  s.appendChild(box);
+  return s;
+}
+function paintChallenges(){
+  Object.keys(CHALLENGES).forEach(id=>{
+    if(!state.challenges[id]) return;
+    $$(`[data-ch="${id}"] [data-honor]`).forEach(b=>{ b.className='btn done'; b.innerHTML=`✓ Done · +${CHALLENGES[id].credits()} ♣`; b.disabled=true; });
+  });
+}
+function completeChallenge(id, method, el){
+  if(state.challenges[id]) return;
+  state.challenges[id] = { at:Date.now(), method };
+  save();
+  award(`c:${id}`, CHALLENGES[id].credits(), CHALLENGES[id].label, el);
+  paintChallenges();
+}
+
+/* ---- Swag bag (flat-lay composition) ---- */
+const SWAG = [
+  { id:"bag", cls:"si-bag", name:"Custom Shoe Bag", line:"Your spikes finally get their own room.",
+    svg:`<svg viewBox="0 0 220 150" aria-hidden="true"><rect x="10" y="30" width="200" height="112" rx="22" fill="#2B4C7A"/><rect x="10" y="30" width="200" height="112" rx="22" fill="none" stroke="#1f3a5e" stroke-width="3"/><path d="M28 44 H192" stroke="#F5F1E7" stroke-width="3" stroke-dasharray="6 5"/><path d="M78 32 C78 6 142 6 142 32" fill="none" stroke="#173C30" stroke-width="9" stroke-linecap="round"/><rect x="10" y="98" width="200" height="12" fill="#F5F1E7" opacity=".9"/><circle cx="110" cy="72" r="17" fill="none" stroke="#C89A45" stroke-width="3"/><text x="110" y="79" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#C89A45">♣</text><circle cx="32" cy="124" r="4" fill="#C89A45"/><circle cx="188" cy="124" r="4" fill="#C89A45"/></svg>` },
+  { id:"cup", cls:"si-cup", name:"Frost Buddy Universal Cup", line:"Holds a can, a bottle, or a very cold opinion.",
+    svg:`<svg viewBox="0 0 90 170" aria-hidden="true"><rect x="8" y="10" width="74" height="20" rx="6" fill="#5A4636"/><rect x="18" y="4" width="54" height="10" rx="4" fill="#173C30"/><path d="M12 30 H78 L70 160 Q45 168 20 160 Z" fill="#6493CD"/><path d="M12 30 H78 L76 56 H14 Z" fill="#4D75AB"/><path d="M24 70 L22 150" stroke="#F5F1E7" stroke-width="4" stroke-linecap="round" opacity=".55"/><path d="M34 70 L33 110" stroke="#F5F1E7" stroke-width="2" stroke-linecap="round" opacity=".4"/><g fill="#F5F1E7" opacity=".85"><path d="M56 88 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"/><path d="M48 124 l1.4 4 4 1.4 -4 1.4 -1.4 4 -1.4 -4 -4 -1.4 4 -1.4z"/></g></svg>` },
+  { id:"hat", cls:"si-hat", name:"Monochromatic Golf Hat", line:"Hides a bad hair day and a worse front nine.",
+    svg:`<svg viewBox="0 0 220 130" aria-hidden="true"><path d="M26 96 C22 46 62 14 112 14 C162 14 190 46 186 92 Z" fill="#315E48"/><path d="M112 14 C104 40 102 70 104 94" stroke="#264c3a" stroke-width="3" fill="none"/><path d="M112 14 C132 40 142 66 146 92" stroke="#264c3a" stroke-width="3" fill="none"/><path d="M112 14 C86 38 70 64 66 94" stroke="#264c3a" stroke-width="3" fill="none"/><circle cx="112" cy="14" r="6" fill="#264c3a"/><path d="M8 96 C60 84 150 82 214 98 C196 124 70 128 8 110 Z" fill="#173C30"/><text x="80" y="72" font-family="Georgia,serif" font-size="26" fill="#3f7359">E</text><path d="M26 92 C80 84 140 84 186 90" stroke="#1d4735" stroke-width="3" fill="none"/></svg>` },
+  { id:"acc", cls:"si-acc", name:"Custom Golf Accessories", line:"Courtesy of Tom Miller Creations.",
+    svg:`<svg viewBox="0 0 200 140" aria-hidden="true"><circle cx="54" cy="58" r="36" fill="#C89A45"/><circle cx="54" cy="58" r="28" fill="none" stroke="#9E7427" stroke-width="3"/><text x="54" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="32" fill="#173C30">♣</text><path d="M120 18 h22 v44 l-4 4 v46 h-4 v-46 l-3-3 -3 3 v46 h-4 v-46 l-4-4 z" fill="#E9E2D3" stroke="#5A4636" stroke-width="2"/><rect x="118" y="16" width="26" height="16" rx="4" fill="#167447"/><g stroke-linecap="round"><path d="M160 60 L186 122" stroke="#167447" stroke-width="7"/><path d="M168 56 L178 124" stroke="#F5F1E7" stroke-width="7"/><path d="M178 58 L170 124" stroke="#4D75AB" stroke-width="7"/></g><ellipse cx="160" cy="58" rx="7" ry="3" fill="#167447"/><ellipse cx="168" cy="54" rx="7" ry="3" fill="#F5F1E7"/><ellipse cx="178" cy="56" rx="7" ry="3" fill="#4D75AB"/></svg>` }
+];
+function renderSwag(){
+  const s = document.createElement('section'); s.className='swag'; s.id='swag'; s.setAttribute('aria-labelledby','swag-t');
+  s.innerHTML = `<div class="wrap">
+    <p class="caps">The bag is good this year.</p>
+    <h2 class="swag-title" id="swag-t">What’s in the Bag?</h2>
+    <p class="swag-sub">Tap something.</p>
+    <!-- ASSET PLACEHOLDER: swag photography. Replace each item's <svg> with <img src="assets/swag-*.png" alt="..."> (transparent PNGs look best) -->
+    <div class="stage" data-stage>
+      ${SWAG.map(it=>`<button type="button" class="swag-item ${it.cls}" data-sw="${it.id}" aria-pressed="false" aria-label="${it.name}">${it.svg}</button>`).join('')}
+      <span class="credit-tag"><b>Custom golf accessories</b>courtesy of Tom Miller Creations</span>
+      <span class="egg-wrap" style="left:60%;top:44%;width:44px;height:44px" data-egg-slot="3"></span>
+    </div>
+    <div class="swag-label" aria-live="polite" data-label><span class="caps">4 things inside</span><strong>Go on. Open it up.</strong><span>Tap any item for a closer look.</span></div>
+    <div class="swag-dots" aria-hidden="true">${SWAG.map(it=>`<i data-dot="${it.id}"></i>`).join('')}</div>
+    <div class="more">
+      <h3>WANT ANOTHER?</h3>
+      <p>Grab extras for yourself or call it an early holiday gift. We won’t judge.</p>
+      <a class="cta gold" data-order href="#" target="_blank" rel="noopener">Order more swag</a>
+      <p class="note" data-order-note aria-live="polite"></p>
+    </div></div>`;
+  const stage = $('[data-stage]', s), label = $('[data-label]', s);
+  const paintDots=()=>SWAG.forEach(it=>$(`[data-dot="${it.id}"]`,s).classList.toggle('on', !!state.swag[it.id]));
+  $$('.swag-item', s).forEach(b=>b.addEventListener('click',()=>{
+    const it = SWAG.find(x=>x.id===b.dataset.sw);
+    const same = b.classList.contains('is-focus');
+    stage.classList.remove('intro');
+    $$('.swag-item',s).forEach(x=>{ x.classList.remove('is-focus'); x.setAttribute('aria-pressed','false'); });
+    if(same){ stage.classList.remove('has-focus'); return; }
+    b.classList.add('is-focus'); b.setAttribute('aria-pressed','true'); stage.classList.add('has-focus');
+    label.innerHTML = `<span class="caps">Item ${SWAG.indexOf(it)+1} of ${SWAG.length}</span><strong>${it.name}</strong><span>${it.line}</span>`;
+    state.swag[it.id]=true; save(); paintDots();
+    if(SWAG.every(x=>state.swag[x.id])) award('swag', CONFIG.swagExploreCredits, 'Unpacked the whole bag', b);
+  }));
+  // Subtle "unboxing" drop the first time the bag scrolls into view
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ stage.classList.add('intro'); io.disconnect(); } }); }, {threshold:.35});
+    io.observe(stage);
+  }
+  const order = $('[data-order]', s);
+  if(CONFIG.swagOrderFormUrl){ order.href = CONFIG.swagOrderFormUrl; }
+  else {
+    order.removeAttribute('target');
+    order.addEventListener('click', e=>{ e.preventDefault(); $('[data-order-note]',s).textContent = 'Order form drops soon. Until then, find any PTA board member.'; });
+  }
+  paintDots();
+  return s;
+}
+
+/* ---- Clubhouse Key credential ---- */
+function renderKey(){
+  const s = document.createElement('section'); s.className='key'; s.id='key'; s.setAttribute('aria-labelledby','key-t'); s.tabIndex=-1;
+  s.innerHTML = `<div class="credential">
+    <div class="lanyard" aria-hidden="true"></div>
+    <div class="cred-body">
+      <p class="caps">Clubhouse Key · Credential <span class="egg-inline" data-egg-slot="5"></span></p>
+      <h2 id="key-t">Your Door Prize Ticket</h2>
+      <p class="cred-status" data-status aria-live="polite"></p>
+      <p class="cred-hint" data-hint></p>
+      <ul class="reqs" data-reqs></ul>
+      <div class="cred-credits"><span class="chip" aria-hidden="true">♣</span><div><b data-cr>0</b> Clubhouse Credits<small>Everything past the Key is bragging rights.</small></div></div>
+      <div class="cred-actions">
+        <button type="button" class="cta gold" data-claim aria-disabled="true">Claim my ticket</button>
+        <button type="button" class="btn ghost" data-share hidden>Show the foursome</button>
+      </div>
+      <p class="claimed-line" data-claimed></p>
+    </div></div>`;
+  $('[data-claim]', s).addEventListener('click', ()=>{
+    const k = keyStatus();
+    if(!(state.raffleTicketUnlocked || k.met)){ toast(`Not yet. ${remainingText(k)} to go.`); return; }
+    openTicket();
+  });
+  $('[data-share]', s).addEventListener('click', share);
+  return s;
+}
+function paintKey(){
+  const s = $('#key'); if(!s) return;
+  const k = keyStatus();
+  const st = $('[data-status]', s);
+  st.textContent = keyHeadline(k); st.classList.toggle('met', k.met);
+  $('[data-hint]', s).textContent = state.raffleTicketClaimed ? 'You’re officially in. Good luck.' : (k.met ? 'You earned a Door Prize Raffle Ticket. Go claim it.' : `${remainingText(k)} until your Door Prize Ticket.`);
+  const u = CONFIG.unlock, rows=[];
+  if(u.requireAllSponsors) rows.push({ok:k.cardsLeft===0, t:'Flip the whole Sponsor Deck', st:`${k.found} / ${k.total}`, go:'#deck'});
+  if(u.requireFiftyFifty) rows.push({ok:k.fifty, t:'Buy 50/50 tickets', st:k.fifty?'✓ Done':'Not yet', go:'[data-ch="fiftyFifty"]'});
+  if(u.requireRaffle) rows.push({ok:k.raffle, t:'Buy raffle tickets', st:k.raffle?'✓ Done':'Not yet', go:'[data-ch="raffle"]'});
+  if(u.minCredits) rows.push({ok:k.creditsLeft===0, t:`Earn ${u.minCredits} Clubhouse Credits`, st:`${k.cr} / ${u.minCredits}`});
+  $('[data-reqs]', s).innerHTML = rows.map((r,i)=>`<li class="${r.ok?'ok':''}"><span class="box" aria-hidden="true">${r.ok?'✓':''}</span><span>${(!r.ok && r.go)?`<a href="#" data-goto="${i}">${r.t}</a>`:r.t}<span class="sr-only">${r.ok?' (done)':' (not done yet)'}</span></span><span class="st">${r.st}</span></li>`).join('');
+  $$('[data-goto]', s).forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); const t=$(rows[+a.dataset.goto].go); t && t.scrollIntoView({behavior:reduced()?'auto':'smooth', block:'center'}); }));
+  $('[data-cr]', s).textContent = k.cr;
+  const claim = $('[data-claim]', s);
+  const unlocked = state.raffleTicketUnlocked || k.met;
+  claim.setAttribute('aria-disabled', String(!unlocked));
+  claim.classList.toggle('done', state.raffleTicketClaimed);
+  claim.textContent = state.raffleTicketClaimed ? 'Door Prize Ticket ✓' : (unlocked ? 'Claim my ticket' : '🔒 Claim my ticket');
+  $('[data-share]', s).hidden = !unlocked;
+  $('[data-claimed]', s).textContent = state.raffleTicketClaimed ? `You told us you got your raffle ticket${state.ticket.claimedAt ? ' at '+fmtTime(state.ticket.claimedAt) : ''}.` : '';
+}
+
+/* =========================================================================
+   09. UI UPDATES, TOAST, TOKEN ANIMATION
+   ========================================================================= */
+function updateAll(){
+  const n = secretsFound(), total = sponsors.length, cr = credits(), k = keyStatus();
+  $('#c-secrets').textContent = `${n} / ${total}`;
+  $('#c-credits').textContent = cr;
+  $('#w-credits').textContent = cr; $('#w-secrets').textContent = `${n}/${total}`;
+  $('#widget').classList.toggle('unlocked', k.met || state.raffleTicketUnlocked);
+  $('#dr-credits').textContent = cr; $('#dr-secrets').textContent = `${n} / ${total}`; $('#dr-found').textContent = eggsFound();
+  $('#dr-key').innerHTML = state.raffleTicketClaimed ? `Door Prize Ticket ✓ <small>You’re officially in. Good luck.</small>`
+    : (state.raffleTicketUnlocked || k.met) ? `YOU UNLOCKED IT. <small>Your Door Prize Ticket is ready to claim.</small>`
+    : `${keyHeadline(k)} <small>${remainingText(k)} until your Door Prize Ticket.</small>`;
+  const recent = Object.values(state.awards).sort((a,b)=>b.t-a.t).slice(0,6);
+  $('#dr-recent').innerHTML = recent.length ? recent.map(a=>`<li><span>${a.l}</span><b>${a.c>0?'+'+a.c+' ♣':''}</b></li>`).join('') : `<li class="empty">Nothing yet. Go flip something.</li>`;
+  paintKey();
+  // UNLOCKED is its own stored state (separate from CLAIMED).
+  if(k.met && !state.raffleTicketUnlocked){
+    state.raffleTicketUnlocked = true; state.ticket.unlockedAt = Date.now(); save();
+    setTimeout(showUnlockMoment, 1700);   // let the last credit token land first
+  }
+}
+
+let toastTimer;
+function toast(html){
+  const t = $('#toast'); t.innerHTML = html; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove('show'), 2400);
+}
+function pulseWidget(){ const w=$('#widget'); w.classList.remove('pulse'); void w.offsetWidth; w.classList.add('pulse'); }
+function flyToken(from){
+  if(reduced() || !from || !from.getBoundingClientRect || !Element.prototype.animate){ pulseWidget(); return; }
+  const r = from.getBoundingClientRect(), w = $('#widget .chip').getBoundingClientRect();
+  const x0 = r.left + r.width/2 - 15, y0 = Math.min(Math.max(r.top + r.height/2 - 15, 10), innerHeight-40);
+  const dx = (w.left + w.width/2 - 15) - x0, dy = (w.top + w.height/2 - 15) - y0;
+  const t = document.createElement('div'); t.className='token'; t.textContent='♣'; t.style.left=x0+'px'; t.style.top=y0+'px';
+  document.body.appendChild(t);
+  const anim = t.animate([
+    { transform:'translate(0,0) scale(.6)', opacity:0 },
+    { transform:'translate(0,-18px) scale(1.15)', opacity:1, offset:.2 },
+    { transform:`translate(${dx*.55}px, ${dy*.55 - 70}px) scale(1)`, opacity:1, offset:.6 },
+    { transform:`translate(${dx}px, ${dy}px) scale(.55)`, opacity:.4 }
+  ], { duration:800, easing:'cubic-bezier(.45,0,.25,1)' });
+  anim.onfinish = ()=>{ t.remove(); pulseWidget(); };
+}
+const fmtTime = (ts) => new Date(ts).toLocaleTimeString([], { hour:'numeric', minute:'2-digit' });
+
+/* =========================================================================
+   10. HIDDEN OBJECTS
+   ========================================================================= */
+function placeEggs(){
+  EGGS.slice(0, Math.min(CONFIG.hiddenObjectCount, EGGS.length)).forEach(egg=>{
+    const slot = $(`[data-egg-slot="${egg.slot}"]`); if(!slot) return;
+    const b = document.createElement('button'); b.type='button'; b.className='egg'; b.setAttribute('aria-label','Something small. Tap it.');
+    b.innerHTML = ICONS[egg.icon];
+    b.style.color = slot.closest('.open, .ticket-game') ? 'var(--gold)' : (slot.closest('.stage') ? 'var(--walnut)' : 'var(--kelly)');
+    const paint=()=>{ if(state.eggs[egg.slot]){ b.classList.add('got'); b.setAttribute('aria-label','Hidden object, already found'); } };
+    b.addEventListener('click', e=>{
+      e.stopPropagation();
+      if(state.eggs[egg.slot]){ toast('Already found that one.'); return; }
+      state.eggs[egg.slot] = true; save(); paint();
+      if(egg.reward) award(`e:${egg.slot}`, CONFIG.hiddenObjectCredits, egg.msg, b);
+      else { toast(egg.msg); updateAll(); }
+    });
+    paint();
+    slot.appendChild(b);
+  });
+}
+
+/* =========================================================================
+   11. REDEMPTION + VERIFICATION HOOKS
+   -------------------------------------------------------------------------
+   Event day = honor system: the golfer shows this screen to a PTA board member.
+   The golfer is NOT automatically entered anywhere.
+   FUTURE INTEGRATION POINTS (not built; no backend in this prototype):
+   • QR verification: a station QR could open ?verify=<challengeId>&code=<secret>.
+     handleVerificationParams() is the stub. Validate server-side, then completeChallenge(id,'qr').
+   • Volunteer confirmation: pair the golfer's "I got my ticket" tap with a volunteer PIN
+     checked against an endpoint, or a volunteer scanning the ticket code.
+   • Purchase-link callback: if tickets move to a checkout with a return URL,
+     point its success redirect at ?verify=fiftyFifty&receipt=<id>.
+   • Manual code entry: add a small input that posts a code to an endpoint, then completeChallenge().
+   • Raffle entry: in markGotTicket(), POST { code: state.ticket.code, claimedAt } to a sheet/endpoint.
+   ========================================================================= */
+function ticketCode(){
+  if(!state.ticket.code){
+    const abc='ABCDEFGHJKMNPQRSTUVWXYZ23456789'; let s='';
+    for(let i=0;i<5;i++) s += abc[Math.floor(Math.random()*abc.length)];
+    state.ticket.code = `EP26-${s}`; save();
+  }
+  return state.ticket.code;
+}
+let clockTimer;
+function showUnlockMoment(){
+  const d = $('#unlocked');
+  if(state.raffleTicketClaimed || $('#ticket').open) return;
+  openDialog(d);
+}
+function openTicket(){
+  if(!(state.raffleTicketUnlocked || keyStatus().met)) return;
+  closeDialog($('#unlocked')); closeDialog($('#drawer'));
+  paintTicket();
+  // A live, ticking clock + moving sheen make a static screenshot easy to spot.
+  const tick=()=>{ $('#tix-clock').textContent = new Date().toLocaleString([], { weekday:'short', hour:'numeric', minute:'2-digit', second:'2-digit' }); };
+  tick(); clearInterval(clockTimer); clockTimer = setInterval(tick, 1000);
+  openDialog($('#ticket'));
+}
+function paintTicket(){
+  const claimed = state.raffleTicketClaimed;
+  const k = keyStatus();
+  $('#tix-cr').textContent = k.cr;
+  $('#tix-sec').textContent = `${k.found} / ${k.total}`;
+  $('#tix-code').textContent = ticketCode();
+  $('#tix-event').textContent = `4th Annual Golf Outing · ${CONFIG.eventDateShort} · ${CONFIG.course}`;
+  $('.verify-check').innerHTML = ICONS.check;
+  $('#tix-card').classList.toggle('is-claimed', claimed);
+  $('#tix-kind').textContent = claimed ? 'Door Prize Ticket ✓' : 'Door Prize Entry';
+  $('#tix-title').textContent = claimed ? 'YOU’RE OFFICIALLY IN.' : 'YOU UNLOCKED IT.';
+  $('#tix-inst').hidden = claimed;
+  $('#tix-luck').hidden = !claimed;
+  $('#tix-verify b').textContent = claimed ? 'TICKET IN HAND ✓' : 'CLUBHOUSE UNLOCKED ✓';
+  // Once claimed, never show the redemption prompt again.
+  $('#tix-got').hidden = claimed;
+  $('#tix-got-note').hidden = claimed;
+}
+let gotArmed=null;
+function markGotTicket(){
+  const b = $('#tix-got');
+  if(state.raffleTicketClaimed) return;
+  if(!gotArmed){
+    b.classList.add('confirming'); b.textContent='Tap again: I have my ticket';
+    gotArmed=setTimeout(()=>{ gotArmed=null; b.classList.remove('confirming'); b.textContent='I got my ticket'; },5000);
+    return;
+  }
+  clearTimeout(gotArmed); gotArmed=null;
+  state.raffleTicketClaimed = true; state.ticket.claimedAt = Date.now(); save();
+  // FUTURE INTEGRATION: send { code: state.ticket.code, claimedAt } to the raffle system here.
+  b.classList.remove('confirming'); b.textContent='I got my ticket';
+  paintTicket(); updateAll();
+}
+function handleVerificationParams(){
+  const p = new URLSearchParams(location.search);
+  if(!p.has('verify')) return;
+  // STUB: accepts nothing automatically. Wire to a real check before trusting URL params.
+  // e.g. if(await verify(p.get('verify'), p.get('code'))) completeChallenge(p.get('verify'), 'qr');
+}
+
+/* =========================================================================
+   12. SHARE, DIALOGS, SETTINGS, DEMO
+   ========================================================================= */
+async function share(){
+  const k = keyStatus();
+  const text = [`I unlocked the Clubhouse at the Emerson Elementary PTA Golf Outing.`, `${k.found} / ${k.total} secrets uncovered`, `♣ ${k.cr} Clubhouse Credits`, (k.met||state.raffleTicketUnlocked) ? 'Door Prize Ticket earned ✓' : ''].filter(Boolean).join('\n');
+  try{
+    if(navigator.share){ await navigator.share({ title:'I unlocked the Clubhouse', text, url:location.href.split('?')[0] }); return; }
+  }catch(e){ if(e && e.name==='AbortError') return; }
+  try{ await navigator.clipboard.writeText(text); toast('<b>Copied.</b> Paste it in the group chat.'); }
+  catch(e){ window.prompt('Copy this:', text); }
+}
+function openDialog(d){
+  if(typeof d.showModal === 'function'){ if(!d.open) d.showModal(); } else { d.setAttribute('open',''); }
+  if(d.id==='drawer') $('#widget').setAttribute('aria-expanded','true');
+}
+function closeDialog(d){ if(typeof d.close === 'function') d.close(); else d.removeAttribute('open'); }
+$$('dialog').forEach(d=>{
+  d.addEventListener('click', e=>{ if(e.target===d) closeDialog(d); });
+  $$('[data-close]', d).forEach(b=>b.addEventListener('click', ()=>closeDialog(d)));
+  d.addEventListener('close', ()=>{ if(d.id==='drawer') $('#widget').setAttribute('aria-expanded','false'); if(d.id==='ticket') clearInterval(clockTimer); });
+});
+$('#widget').addEventListener('click', ()=>openDialog($('#drawer')));
+$('#dr-gokey').addEventListener('click', ()=>{ closeDialog($('#drawer')); const k=$('#key'); k.scrollIntoView({behavior:reduced()?'auto':'smooth'}); k.focus({preventScroll:true}); });
+$('#open-settings').addEventListener('click', ()=>openDialog($('#settings')));
+$('#tix-share').addEventListener('click', share);
+$('#tix-got').addEventListener('click', markGotTicket);
+$('#unl-claim').addEventListener('click', openTicket);
+
+let resetArmed=null;
+$('#reset-btn').addEventListener('click', e=>{
+  const b=e.currentTarget;
+  if(!resetArmed){ b.textContent='Tap again to erase everything'; b.classList.add('confirming'); resetArmed=setTimeout(()=>{resetArmed=null; b.textContent='Reset my progress'; b.classList.remove('confirming');},4000); return; }
+  try{ localStorage.removeItem(CONFIG.storageKey); }catch(_){}
+  location.reload();
+});
+
+/* DEMO MODE (testing only; hidden unless CONFIG.demoMode or ?demo) */
+const demo = CONFIG.demoMode || new URLSearchParams(location.search).has('demo');
+if(demo){
+  $('#demo-box').hidden = false;
+  $$('[data-demo]').forEach(b=>b.addEventListener('click', ()=>{
+    const a = b.dataset.demo, now = Date.now();
+    if(a==='flipall' || a==='flipmost'){
+      const list = a==='flipall' ? sponsors : sponsors.slice(0,-1);
+      list.forEach(s=>{ state.discovered[s.id]=true; state.awards[`s:${s.id}`] = state.awards[`s:${s.id}`] || {c:CONFIG.sponsorDiscoveryCredits, l:`Discovered: ${s.name}`, t:now}; });
+      if(a==='flipall') state.awards['deck-bonus'] = state.awards['deck-bonus'] || {c:CONFIG.allSponsorsBonus, l:'Flipped the whole deck', t:now};
+    }
+    if(a==='tickets'){ ['fiftyFifty','raffle'].forEach(id=>{ state.challenges[id]={at:now,method:'demo'}; state.awards[`c:${id}`]=state.awards[`c:${id}`]||{c:CHALLENGES[id].credits(), l:CHALLENGES[id].label, t:now}; }); }
+    if(a==='credits'){ state.awards[`demo:${now}`] = {c:5, l:'Demo credits', t:now}; }
+    if(a==='unclaim'){ state.raffleTicketClaimed=false; state.ticket.claimedAt=null; }
+    save(); location.reload();
+  }));
+}
+
+/* =========================================================================
+   13. BOOT
+   ========================================================================= */
+function fitGroups(){
+  // Keep every row full. Mobile: 2 columns. Desktop: 4 columns, where the last wide card in a
+  // group stretches (up to full width) to absorb any gap; otherwise single cards widen.
+  const cols = matchMedia('(min-width:900px)').matches ? 4 : 2;
+  $$('.deck-grid').forEach(g=>{
+    const items = [...g.children];
+    const spans = items.map(it=>+it.dataset.span);
+    let need = (cols - spans.reduce((a,b)=>a+b,0) % cols) % cols;
+    if(need){
+      const wideIdx = spans.map((v,i)=>v>=2?i:-1).filter(i=>i>=0).pop();
+      if(cols===4 && wideIdx!==undefined){ const add = Math.min(need, 4-spans[wideIdx]); spans[wideIdx]+=add; need-=add; }
+      for(let i=0;i<spans.length && need>0;i++){ if(spans[i]===1){ spans[i]=2; need--; } }
+    }
+    items.forEach((it,i)=>{
+      it.classList.toggle('span-2', spans[i]>=2); it.classList.toggle('span-1', spans[i]===1);
+      it.style.gridColumn = `span ${spans[i]}`;
+      const tag = $('.type-tag', it); if(tag) tag.textContent = (spans[i]===1 && cols===2) ? tag.dataset.short : tag.dataset.long;
+    });
+  });
+}
+function goDeck(){
+  $('#deck').scrollIntoView({behavior:reduced()?'auto':'smooth'});
+  setTimeout(()=>{ const c=$('.card'); c && c.focus({preventScroll:true}); }, reduced()?0:600);
+}
+function boot(){
+  load();
+  $('#meta-date').textContent = CONFIG.eventDateShort;
+  $('#meta-course').textContent = CONFIG.course;
+  const feed = $('#feed');
+  const map = { cards:b=>renderCardGroup(b.items), wyr:renderWYR, shot:renderShot, trivia:renderTrivia, tot:renderToT, swag:renderSwag, key:renderKey, challenges:b=>renderChallenges(b.ids) };
+  FEED.forEach(block=>{ const el = map[block.type] && map[block.type](block); if(el) feed.appendChild(el); });
+  placeEggs();
+  paintChallenges();
+  fitGroups();
+  addEventListener('resize', fitGroups);
+  $$('[data-jump]').forEach(b=>b.addEventListener('click', goDeck));
+  $('#letsplay').addEventListener('click', e=>{ e.preventDefault(); goDeck(); });
+  handleVerificationParams();
+  updateAll();
+  if(!storageOK) toast('Private browsing? Your progress won’t save on this tab.');
+}
+boot();
+</script>
+</body>
+</html>
